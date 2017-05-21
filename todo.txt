@@ -1,0 +1,25 @@
+
+- Both versions
+ - Support for presetting options via GET variables
+  =>Popout YouTube Bookmark-Button
+
+ - Support for multiple windows
+  - I would probably need cookies for that, so I can save the counter somewhere...or I could make a script that checks if the windows exist yet, right?
+
+<noscript>pls active js :c</noscript>
+
+adsense
+nonsense
+Kappa
+
+       RRR  EEEE M    M  OO  V  V EEEE
+       R  R E    MM  MM O  O V  V E
+       RRR  EEE  M MM M O  O V  V EEE
+       R  R E    M    M O  O V  V E
+       R  R EEEE M    M  OO   VV  EEEE
+
+ H  H EEEE RRR   OO  BBB  RRR  IIII N  N EEEE
+ H  H E    R  R O  O B  B R  R  II  NN N E
+ HHHH EEE  RRR  O  O BBB  RRR   II  N NN EEE
+ H  H E    R  R O  O B  B R  R  II  N  N E
+ H  H EEEE R  R  OO  BBB  R  R IIII N  N EEEE
