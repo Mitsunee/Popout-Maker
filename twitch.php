@@ -79,10 +79,11 @@ function ToggleChat(chatchoicedivvalue) {
 	</div>
 </p>
 <p>
-	<input type="button" onclick="GeneratePopout();" value="Generate Popout"> frame.htm next
+	<input type="button" onclick="GeneratePopout();" value="Generate Popout">
 </p>
 <p>Also check out:<br>
-<a href="/youtube" style="color:inherit !important;text-decoration:none;">Popout Maker - <span style="font-weight:400;">You<span class="Tube">Tube</span></span></a></p>
-<div id="debugDIV"></div>
+<a href="/" style="color:inherit !important;text-decoration:none;font-size:0.9em;">Popout Maker</a><br>
+<a href="/youtube" style="color:inherit !important;text-decoration:none;font-size:0.9em;">Popout Maker - <span style="font-weight:400;">You<span class="Tube">Tube</span></span></a><br>
+<a href="http://nowlivebot.com" style="color:inherit !important;text-decoration:none;font-size:0.9em;"><img src="/assets/-nl<?php if(mt_rand(0,100)==42) echo "p";?>.png" style="position:relative;top:6px;"> Now Live <span style="font-size:0.8em">(Stream announcing bot for Discord)</span></a></p>
 <div id="footer">Made by <a href="http://twitter.com/Mitsunee">Mitsunee</a><span style="float:right;"><a href="/about" target="_blank">About</a> | Version: 1.0 (<a href="/changelog" target="_blank">changelog</a>)</span></div>
 </body></html>

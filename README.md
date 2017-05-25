@@ -26,8 +26,11 @@ The current version (1.0) is a stable release version. The youtube-specific vers
 
 
 - Twitch-specific version
+- *twitch:* js funstufftm to get rid of black bars automatically (but ask for permission once)
 - Better CSS styling
+- *forms* horizontal lists with shifting background div?
 - add `<noscript>` warnings
 - Using PHP to allow presets via GET variables
 - Adding buttons to copy or bookmark a preset-link
 - A small wiki showcasing all preset variables and a general guide for all 3 versions
+- redo this file

@@ -109,7 +109,8 @@ function _GET(needle,haystack) {//looks for variable needle in haystack
 <tr><td>Window height:</td><td><input type="number" name="height" id="inputheight" min="100" value="720" onChange="aspectratio(this,'inputwidth','keep169option',9);"></td></tr></table></div>
 <p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
 <p>Also check out:<br>
-<a href="/twitch" style="color:#aa00ff !important;text-decoration:none;">Popout Maker - <span style="font-weight:400;">Twitch</span></span></a></p>
+<a href="/" style="color:inherit !important;text-decoration:none;font-size:0.9em;">Popout Maker</a><br>
+<a href="/twitch" style="color:#aa00ff !important;text-decoration:none;font-size:0.9em;">Popout Maker - <span style="font-weight:400;">Twitch</span></span></a></p>
 <p class="note" style="font-size:14px !important">Tip: Try using an external program, to make your popout windows 'always on top'.</p></div>
 <div id="footer">Made by <a href="http://twitter.com/Mitsunee">Mitsunee</a><span style="float:right;"><a href="/about" target="_blank">About</a> | Version: 1.0 (<a href="/changelog" target="_blank">changelog</a>)</span></div>
 </body></html>
