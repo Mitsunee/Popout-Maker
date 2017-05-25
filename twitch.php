@@ -8,18 +8,14 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
-function GeneratePopout() { // STILL OLD!!
+function GeneratePopout() { // TODO:
 	/*
-	- okay so... we gotta have some kinda frame.htm somewhere with ?channel=mitsunee_&chat=yes|no[&chatside=left|right] and javascript that ensures aspectratio
 	- if there's chat we need an extra 340px width
-	- why the fuck is there dubstep playing on hardbaseFM, like wtf??
 	- REMINDER that resizeTo resizes the full window, so you need to do some calc with outherwidth vs innerwidth
 	- also save the current width and height in a var, so we now which one changed (needs to be biased for height or width because of diagonal resize)
 	*/
 	//get inputs
-	input = document.getElementById('popouturl').value;
-	//filter input (no spaces, lower case only, a-z,0-9,_ only)
-	input = input.toLowerCase().trim();//document.getElementById('popouturl').value.trim().toLowerCase().replace(\[^a-z0-9_]+\g,"") THAT GOOD MOM?
+	input = document.getElementById('popouturl').value.toLowerCase().replace(/[^a-z0-9_]+/gi,"");
 	if(input=="") return false;//nice input
 	inputwidth = document.getElementById('inputwidth').value;
 	inputheight = document.getElementById('inputheight').value;
