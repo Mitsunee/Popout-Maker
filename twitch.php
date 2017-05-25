@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Popout Maker</title>
+<title>Popout Maker - Twitch</title>
 <link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="icon" href="/favicon.ico">
 <link rel="shortcut icon" href="/favicon.ico">
-<script src="/assets/googleanalytics.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 function GeneratePopout() { // STILL OLD!!
@@ -29,15 +28,21 @@ function GeneratePopout() { // STILL OLD!!
 	chatsideoption = $('input[name="chatsidechoice"]:checked').val();
 	//piece together preferences
 	popoutWindowpreferences = "width=" + inputwidth + ",height=" + inputheight + ",status=no,scrollbars=no,resizable=yes,location=no,menubar=no";
-	// **DEBUG ONLY **
+	/*DEBUG ONLY
 	debug = "";
 	debug += popoutWindowpreferences + "<br>";
 	debug += input + " ";
 	if(chatoption.checked) {debug += "with chat on " + chatsideoption + " side";} else {debug += "without chat";}
 	document.getElementById('debugDIV').innerHTML = debug;
-	// **DEBUG END **
-	//popoutWindow = window.open(input, "pmpopout", popoutWindowpreferences);
-	//popoutWindow.focus();
+	*DEBUG END*/
+	windowLink = "/frame/twitchframe.php?channel="+input+"&chat=";
+	if(chatoption.checked) {
+		windowLink = windowLink + chatsideoption;
+	} else {
+		windowLink = windowLink + "none";
+	}
+	popoutWindow = window.open(windowLink, "pmpopout", popoutWindowpreferences);
+	popoutWindow.focus();
 }
 function ToggleChat(chatchoicedivvalue) {
 	chatchoicediv = document.getElementById("chatsidediv");
