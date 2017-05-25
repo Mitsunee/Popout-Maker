@@ -34,3 +34,8 @@ The current version (1.0) is a stable release version. The youtube-specific vers
 - Adding buttons to copy or bookmark a preset-link
 - A small wiki showcasing all preset variables and a general guide for all 3 versions
 - redo this file
+
+## Other stuff
+
+
+The old changelog can be found [here](http://popoutmaker.mitsunee.com/changelog)

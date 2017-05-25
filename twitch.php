@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html><?php $self="twitch";?>
 <html>
 <head>
-<title>Popout Maker - Twitch</title>
-<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,700" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/assets/style.css">
+<title>Popout-Maker Twitch</title>
+<link rel="stylesheet" href="/assets/style.css" type="text/css">
 <link rel="icon" href="/favicon.ico">
 <link rel="shortcut icon" href="/favicon.ico">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -42,10 +41,13 @@ function GeneratePopout() { // TODO:
 }
 function ToggleChat(chatchoicedivvalue) {
 	chatchoicediv = document.getElementById("chatsidediv");
+	chatsizenote = document.getElementById("chatsizenote");
 	if(chatchoicedivvalue) {
 		chatchoicediv.style.display="block";
+		chatsizenote.style.visibility="visible";
 	} else {
 		chatchoicediv.style.display="none";
+		chatsizenote.style.visibility="hidden";
 	}
 }
 </script>
@@ -54,14 +56,14 @@ function ToggleChat(chatchoicedivvalue) {
 <script src="assets/OpenTextbox.js"></script>
 </head>
 <body>
-<h1 id="title">Popout Maker - <span style="color:#aa00ff;font-weight:400;">Twitch</span></h1><hr>
+<h1 id="title">Popout Maker - <span style="color:#6441a5;">Twitch</span></h1><hr>
 <div id="main">
 <p>Enter channel name here:<br>
 <input type="text" name="popouturl" value="" id="popouturl" style="width:500px"></p>
 <table>
 	<tr>
 		<td>Window width:</td>
-		<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"></td>
+		<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"><span id="chatsizenote" class="note">+340</td>
 	</tr>
 	<tr>
 		<td>Window height:</td>
@@ -78,12 +80,5 @@ function ToggleChat(chatchoicedivvalue) {
 		<input type="radio" name="chatsidechoice" id="chatsideright" value="right" checked><label for="chatsideright"> Show chat on the right side</label>
 	</div>
 </p>
-<p>
-	<input type="button" onclick="GeneratePopout();" value="Generate Popout">
-</p>
-<p>Also check out:<br>
-<a href="/" style="color:inherit !important;text-decoration:none;font-size:0.9em;">Popout Maker</a><br>
-<a href="/youtube" style="color:inherit !important;text-decoration:none;font-size:0.9em;">Popout Maker - <span style="font-weight:400;">You<span class="Tube">Tube</span></span></a><br>
-<a href="http://nowlivebot.com" style="color:inherit !important;text-decoration:none;font-size:0.9em;"><img src="/assets/-nl<?php if(mt_rand(0,100)==42) echo "p";?>.png" style="position:relative;top:6px;"> Now Live <span style="font-size:0.8em">(Stream announcing bot for Discord)</span></a></p>
-<div id="footer">Made by <a href="http://twitter.com/Mitsunee">Mitsunee</a><span style="float:right;"><a href="/about" target="_blank">About</a> | Version: 1.0 (<a href="/changelog" target="_blank">changelog</a>)</span></div>
-</body></html>
+<p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
+<?php require '/assets/inc/footer.php';?>

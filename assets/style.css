@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,500,700');
 body {
 	margin:0px;
 	padding:0px;
 	background:#BBB;
 	min-width:1000px;
-	font-family:'Exo', sans-serif;
+	font-family:'Exo 2', sans-serif;
 	font-weight:300;
 }
 #title {
@@ -32,13 +33,17 @@ hr {
 	border:1px solid #666;
 	background:#EEE;
 }
+a{
+	color:inherit;
+	text-decoration:none;
+}
 .Tube {
 	display:inline-block;
 	color:white;
 	background:#E00;
 	background-image:linear-gradient(to bottom,#E00,#C00);
 	border-radius:14px;
-	padding:0px 5px;
+	padding:0px 5px 2px 5px;
 	margin-left:2px;
 }
 #playlisttriggerbox {
@@ -73,7 +78,7 @@ fieldset{
 .errorwrapper img {
 	float:left;
 }
-#footer a{color:#C00;}
+#footer a{color:#C00;text-decoration:underline;}
 #footer{
 	display:block;
 	box-sizing:border-box;

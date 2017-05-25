@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html><?php $self="index";?>
 <html>
 <head>
-<title>Popout Maker</title>
-<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,700" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/assets/style.css">
+<title>Popout-Maker</title>
+<link rel="stylesheet" href="/assets/style.css" type="text/css">
 <link rel="icon" href="/favicon.ico">
 <link rel="shortcut icon" href="/favicon.ico">
-<script src="/assets/googleanalytics.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 function GeneratePopout() {
@@ -56,10 +54,4 @@ function GeneratePopout() {
 	<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
 </div>
 <p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
-<p>Also check out:<br>
-<a href="/youtube" style="color:inherit !important;text-decoration:none;font-size:0.9em;">Popout Maker - <span style="font-weight:400;">You<span class="Tube">Tube</span></span></a><br>
-<a href="/twitch" style="color:#aa00ff !important;text-decoration:none;font-size:0.9em;">Popout Maker - <span style="font-weight:400;">Twitch</span></span></a></p>
-<p class="note" style="font-size:14px !important">Tip: Try using an external program, to make your popout windows 'always on top'.</p>
-</div>
-<div id="footer">Made by <a href="http://twitter.com/Mitsunee">Mitsunee</a><span style="float:right;"><a href="/about" target="_blank">About</a> | Version: 1.0 (<a href="/changelog" target="_blank">changelog</a>)</span></div>
-</body></html>
+<?php require '/assets/inc/footer.php';?>

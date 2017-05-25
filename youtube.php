@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html><?php $self="youtube";?>
 <html>
 <head>
-<title>Popout Maker - YouTube</title>
-<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,700" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/assets/style.css">
+<title>Popout-Maker YouTube</title>
+<link rel="stylesheet" href="/assets/style.css" type="text/css">
 <link rel="icon" href="/favicon.ico">
 <link rel="shortcut icon" href="/favicon.ico">
-<script src="/assets/googleanalytics.js"></script>
 <script type="text/javascript">
 function GeneratePopout() {
 	//reset error divs
@@ -89,7 +87,7 @@ function _GET(needle,haystack) {//looks for variable needle in haystack
 <script src="../assets/OpenTextbox.js"></script>
 </head>
 <body>
-<h1 id="title">Popout Maker - <span style="font-weight:400;">You<span class="Tube">Tube</span></span></h1><hr>
+<h1 id="title">Popout Maker - <span style="font-weight:400;">You<span class="Tube" style="font-weight:700;">Tube</span></span></h1><hr>
 <div id="main">
 <div class="errorwrapper" id="videoiderror" style="display:none;"><img src="../assets/warning.png" alt="!"><div>Couldn't find video ID.</div></div>
 <div class="errorwrapper" id="playlistiderror" style="display:none;"><img src="../assets/warning.png" alt="!"><div>Couldn't find playlist ID. If there's no playlist in your url, please remove the checkmark below.</div></div>
@@ -108,9 +106,4 @@ function _GET(needle,haystack) {//looks for variable needle in haystack
 <table><tr><td>Window width:</td><td><input type="number" name="width" id="inputwidth" min="100" value="1280" onChange="aspectratio(this,'inputheight','keep169option',16);"></td><td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option" checked="checked">Keep 16:9 aspect ratio</tr>
 <tr><td>Window height:</td><td><input type="number" name="height" id="inputheight" min="100" value="720" onChange="aspectratio(this,'inputwidth','keep169option',9);"></td></tr></table></div>
 <p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
-<p>Also check out:<br>
-<a href="/" style="color:inherit !important;text-decoration:none;font-size:0.9em;">Popout Maker</a><br>
-<a href="/twitch" style="color:#aa00ff !important;text-decoration:none;font-size:0.9em;">Popout Maker - <span style="font-weight:400;">Twitch</span></span></a></p>
-<p class="note" style="font-size:14px !important">Tip: Try using an external program, to make your popout windows 'always on top'.</p></div>
-<div id="footer">Made by <a href="http://twitter.com/Mitsunee">Mitsunee</a><span style="float:right;"><a href="/about" target="_blank">About</a> | Version: 1.0 (<a href="/changelog" target="_blank">changelog</a>)</span></div>
-</body></html>
+<?php require '/assets/inc/footer.php';?>
