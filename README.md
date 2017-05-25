@@ -20,7 +20,9 @@ Popup windows are smaller browser windows that are intentionally missing some fe
 ## Current status:
 
 
-The current version (1.0) is a stable release version. The youtube-specific version was remade and finished and `<label>` tags were added to improve the interface.
+The _current version (1.0)_ is a **stable** release version. The youtube-specific version was remade and finished and `<label>` tags were added to improve the interface.
+
+The _twitch-beta_ branch is currently **in development**. It includes the twitch-specific version and some major rework of styling.
 
 ## Current goals:
 
