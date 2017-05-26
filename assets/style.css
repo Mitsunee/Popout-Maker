@@ -50,22 +50,13 @@ a{
 	margin-left:16px;
 	overflow:hidden;
 }
-input[type='url']{
-	width:500px;
-}
-input[type='button']{
-	font-family:'Exo 2',sans-serif;
-}
-fieldset{
-	border:0px;
-	padding:0px;
-	margin:0px;
-}
+
 .note {
 	font-style:italic;
 	color:#444;
 	font-size:10px;
 }
+
 .errorwrapper div {
 	border:1px solid red;
 	color:red;
@@ -78,6 +69,7 @@ fieldset{
 .errorwrapper img {
 	float:left;
 }
+
 #footer a{color:#C00;text-decoration:underline;}
 #footer{
 	display:block;
@@ -93,4 +85,49 @@ fieldset{
 	font-size:14px;
 	padding:2px;
 }
+
+
+/* INPUTS */
 #inputwidth,#inputheight {width:45px;}
+
+input[type='url']{
+	width:500px;
+}
+input[type='button']{
+	font-family:'Exo 2',sans-serif;
+}
+
+/* RADIO INPUTS */
+#chatsidediv{/*wrapperboxes*/
+	height:29px;
+	display:block;
+	border:1px solid #686868;
+	border-radius:16px;
+	background:#686868;
+	background-image:linear-gradient(to bottom,#666,#888 40%,#999 85%,#888 100%);
+	padding:3px;
+	position:relative;
+	z-index:1;
+}
+#chatsidediv .radio-bg{/*background div to indicate selection*/
+	height:27px;
+	background:#999;
+	background-image:linear-gradient(to bottom,#888,#AAA);
+	border:1px solid #999;
+	border-radius:16px;
+	box-sizing:border-box;
+	box-shadow:1px 1px 6px rgba(0,0,0,150);
+	position:relative;
+	top:-28px;
+	z-index:2;
+    transition: margin 0.5s;
+}
+label.is-radio {position:relative;z-index:3;}
+input[type='radio']+label.is-radio{
+	display:block;
+	float:left;
+	padding:5px 7px;
+	margin:0px;
+	text-align:center;
+}
+input[type='radio']{display:none;}
