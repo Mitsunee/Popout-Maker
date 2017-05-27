@@ -2,10 +2,7 @@
 <html>
 <head>
 <title>Popout-Maker Twitch</title>
-<link rel="stylesheet" href="/assets/style.css" type="text/css">
-<link rel="icon" href="/favicon.ico">
-<link rel="shortcut icon" href="/favicon.ico">
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<?php require '/assets/inc/head.php';?>
 <script type="text/javascript">
 function GeneratePopout() { 
 	//reset error div
@@ -33,9 +30,6 @@ function ToggleChat(radioNum) {
 	document.getElementById("chatsidebg").className=radioNum;
 }
 </script>
-<script src="assets/aspectratio.js"></script>
-<script src="assets/radioValue.js"></script>
-<script src="assets/OpenTextbox.js"></script>
 <style>
 #chatsidediv{width:642px;}
 #chatsidediv .radio-bg{width:212px;}

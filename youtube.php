@@ -2,9 +2,7 @@
 <html>
 <head>
 <title>Popout-Maker YouTube</title>
-<link rel="stylesheet" href="/assets/style.css" type="text/css">
-<link rel="icon" href="/favicon.ico">
-<link rel="shortcut icon" href="/favicon.ico">
+<?php require '/assets/inc/head.php';?>
 <script type="text/javascript">
 function GeneratePopout() {
 	//reset error divs
@@ -72,9 +70,6 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 	return haystack.substring(startAt,stopAt);
 }
 </script>
-<script src="../assets/aspectratio.js"></script>
-<script src="../assets/radioValue.js"></script>
-<script src="../assets/OpenTextbox.js"></script>
 </head>
 <body>
 <h1 id="title">Popout Maker - <span style="font-weight:400;">You<span class="Tube" style="font-weight:700;">Tube</span></span></h1><hr>
@@ -84,9 +79,9 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 <p>Enter your youtube url here:<br>
 <input type="url" name="popouturl" value="" id="popouturl"></label></p>
 <input type="checkbox" id="playlisttrigger"><label for="playlisttrigger">Include Playlist</label>
-<div id="advanced_options_closed" style="display:block;"><input type="button" style="background:url('../assets/expand.gif') 0px 4px no-repeat;padding-left:15px;border:0px;" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
+<div id="advanced_options_closed" style="display:block;"><input type="button" class="ninja expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
 <div id="advanced_options_open" style="display:none;">
-	<input type="button" style="background:url('../assets/collapse.gif') 0px 4px no-repeat;padding-left:15px;border:0px;" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
+	<input type="button" class="ninja collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
 	<p>
 		<label><input type="checkbox" id="autoplayoption" checked="checked"> Enable Autoplay</label><br>
 		<label><input type="checkbox" id="annotationsoption" checked="checked"> Enable Annotations</label><br>

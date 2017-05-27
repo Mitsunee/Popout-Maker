@@ -2,14 +2,17 @@
 <html>
 <head>
 <title>Popout-Maker</title>
-<link rel="stylesheet" href="/assets/style.css" type="text/css">
-<link rel="icon" href="/favicon.ico">
-<link rel="shortcut icon" href="/favicon.ico">
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<?php require '/assets/inc/head.php';?>
 <script type="text/javascript">
 function GeneratePopout() {
+	//reset error divs
+	document.getElementById("linkemptyerror").style.display="none";
+	//get input
 	input = document.getElementById('popouturl').value.trim();
-	if(input=="") return false;
+	if(input=="") {
+		document.getElementById("linkemptyerror").style.display="block";
+		return false;
+	}
 	httpcheck = input.substring(0,7);
 	httpscheck = input.substring(0,8);
 	inputwidth = document.getElementById('inputwidth').value;
@@ -27,18 +30,16 @@ function GeneratePopout() {
 	popoutWindow.focus();
 }
 </script>
-<script src="assets/aspectratio.js"></script>
-<script src="assets/radioValue.js"></script>
-<script src="assets/OpenTextbox.js"></script>
 </head>
 <body>
 <h1 id="title">Popout Maker</h1><hr>
 <div id="main">
+<div class="errorwrapper" id="linkemptyerror" style="display:none;"><img src="../assets/warning.png" alt="!"><div>You must enter a URL to open.</div></div>
 <p>Enter your url here:<br>
 <input type="url" name="popouturl" value="" id="popouturl"></p>
-<div id="advanced_options_closed" style="display:block;"><input type="button" style="background:url('assets/expand.gif') 0px 4px no-repeat;padding-left:15px;border:0px;" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
+<div id="advanced_options_closed" style="display:block;"><input type="button" class="ninja expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
 <div id="advanced_options_open" style="display:none;">
-	<input type="button" style="background:url('assets/collapse.gif') 0px 4px no-repeat;padding-left:15px;border:0px;" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
+	<input type="button" class="ninja collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
 	<table>
 		<tr>
 			<td>Window width:</td>
