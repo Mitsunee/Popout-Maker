@@ -12,6 +12,8 @@ if($chatoption=="none") {$chat=false;}else{$chat=true;}
 <html>
 <head>
 <title><?php echo $channel;?> on twitch</title>
+<link rel="icon" href="/assets/glitch.ico">
+<link rel="shortcut icon" href="/assets/glitch.ico">
 <style>
 body,html{margin:0px;padding:0px;height:100%;width:100%;overflow:hidden;}
 iframe{border:0px;margin:0px;padding:0px;}

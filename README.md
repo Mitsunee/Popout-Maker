@@ -17,6 +17,16 @@ Popup windows are smaller browser windows that are intentionally missing some fe
 ![Popup Browser Window Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/gitimg2.png)
 > Here's the popup window version of google.de in the very same browser. The tab row and icons around the adress bar are gone. Some browsers will even go as far as hiding the adress bar as well. Of course the bookmarks are also hidden (this is the case in any browser).
 
+## YouTube and Twitch Popouts
+
+
+There is also dedicated pages for YouTube and Twitch popouts. The YouTube-version automatically converts video page and or playlist links to embed links, so only the actual video is visible in the popout.
+![YouTube Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/gitimg3.png)
+> Only the actual video is in the popout.
+
+The Twitch-version instead takes only the channel name and opens a similar popout that optionally also includes the chat:
+![Twitch Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/gitimg4.png)
+
 ## Current status:
 
 
@@ -25,10 +35,8 @@ The current version (1.0) is a stable release version. The youtube-specific vers
 ## Current goals:
 
 
-- Twitch-specific version
 - *twitch:* js funstufftm to get rid of black bars automatically (but ask for permission once)
 - Better CSS styling
-- *forms* horizontal lists with shifting background div?
 - add `<noscript>` warnings
 - Using PHP to allow presets via GET variables
 - Adding buttons to copy or bookmark a preset-link
