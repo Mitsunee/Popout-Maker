@@ -20,12 +20,12 @@ Popup windows are smaller browser windows that are intentionally missing some fe
 ## YouTube and Twitch Popouts
 
 
-There is also dedicated pages for YouTube and Twitch popouts. The YouTube-version automatically converts video page and or playlist links to embed links, so only the actual video is visible in the popout.
-![YouTube Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/gitimg3.png)
+There is also dedicated pages for YouTube and Twitch popouts. The YouTube-version automatically converts video page and or playlist links to embed links, so only the actual video is visible in the popout.  
+![YouTube Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/twitch-beta/assets/gitimg3.png)
 > Only the actual video is in the popout.
 
-The Twitch-version instead takes only the channel name and opens a similar popout that optionally also includes the chat:
-![Twitch Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/gitimg4.png)
+The Twitch-version instead takes only the channel name and opens a similar popout that optionally also includes the chat:  
+![Twitch Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/twitch-beta/assets/gitimg4.png)
 
 ## Current status:
 
