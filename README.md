@@ -30,7 +30,6 @@ The Twitch-version instead takes only the channel name and opens a similar popou
 ## Current status:
 
 
-
 The current version (1.1) is a stable release version, it brought the Twitch-version and better styling.
 
 ## Current goals:
