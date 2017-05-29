@@ -17,18 +17,32 @@ Popup windows are smaller browser windows that are intentionally missing some fe
 ![Popup Browser Window Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/gitimg2.png)
 > Here's the popup window version of google.de in the very same browser. The tab row and icons around the adress bar are gone. Some browsers will even go as far as hiding the adress bar as well. Of course the bookmarks are also hidden (this is the case in any browser).
 
+## YouTube and Twitch Popouts
+
+
+There is also dedicated pages for YouTube and Twitch popouts. The YouTube-version automatically converts video page and or playlist links to embed links, so only the actual video is visible in the popout.  
+![YouTube Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/twitch-beta/assets/gitimg3.png)
+> Only the actual video is in the popout.
+
+The Twitch-version instead takes only the channel name and opens a similar popout that optionally also includes the chat:  
+![Twitch Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/twitch-beta/assets/gitimg4.png)
+
 ## Current status:
 
 
-The _current version (1.0)_ is a **stable** release version. The youtube-specific version was remade and finished and `<label>` tags were added to improve the interface.
 
-The _twitch-beta_ branch is currently **in development**. It includes the twitch-specific version and some major rework of styling.
+The current version (1.1) is a stable release version, it brought the Twitch-version and better styling.
 
 ## Current goals:
 
 
-- Twitch-specific version
-- Better CSS styling
+- *twitch:* js funstufftm to get rid of black bars automatically (but ask for permission once)
 - Using PHP to allow presets via GET variables
 - Adding buttons to copy or bookmark a preset-link
 - A small wiki showcasing all preset variables and a general guide for all 3 versions
+- redo this file
+
+## Other stuff
+
+
+The old changelog can be found [here](http://popoutmaker.mitsunee.com/changelog)

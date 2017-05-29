@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,500,700');
 body {
 	margin:0px;
 	padding:0px;
 	background:#BBB;
 	min-width:1000px;
-	font-family:'Exo', sans-serif;
+	font-family:'Exo 2', sans-serif;
 	font-weight:300;
 }
 #title {
@@ -32,35 +33,30 @@ hr {
 	border:1px solid #666;
 	background:#EEE;
 }
+a{
+	color:inherit;
+	text-decoration:none;
+}
 .Tube {
 	display:inline-block;
 	color:white;
 	background:#E00;
 	background-image:linear-gradient(to bottom,#E00,#C00);
 	border-radius:14px;
-	padding:0px 5px;
+	padding:0px 5px 2px 5px;
 	margin-left:2px;
 }
 #playlisttriggerbox {
 	margin-left:16px;
 	overflow:hidden;
 }
-input[type='url']{
-	width:500px;
-}
-input[type='button']{
-	font-family:'Exo 2',sans-serif;
-}
-fieldset{
-	border:0px;
-	padding:0px;
-	margin:0px;
-}
+
 .note {
 	font-style:italic;
 	color:#444;
 	font-size:10px;
 }
+
 .errorwrapper div {
 	border:1px solid red;
 	color:red;
@@ -73,7 +69,8 @@ fieldset{
 .errorwrapper img {
 	float:left;
 }
-#footer a{color:#C00;}
+
+#footer a{color:#C00;text-decoration:underline;}
 #footer{
 	display:block;
 	box-sizing:border-box;
@@ -88,4 +85,86 @@ fieldset{
 	font-size:14px;
 	padding:2px;
 }
+
+
+/* INPUTS */
 #inputwidth,#inputheight {width:45px;}
+
+input[type='url']{
+	width:500px;
+}
+input[type='button']{
+	font-family:'Exo 2',sans-serif;
+	font-weight:300;
+	background:#BBB;
+	background-image:linear-gradient(to bottom,#AAA,#CCC);
+	border:1px solid #999;
+	border-radius:8px;
+	box-shadow:1px 1px 3px rgba(0,0,0,0.75);
+}
+input[type='button']:hover{
+	border:1px solid #AAA;
+	background:#CCC;
+	background-image:linear-gradient(to bottom,#DDD,#CCC);
+	box-shadow:1px 1px 3px rgba(0,0,0,1);
+}
+input[type='button']:not(.ninja):active{
+	transform:translateY(2px);
+}
+input[type='button'].ninja{
+	padding-left:15px;
+	border:0px !important;
+	box-shadow:0px 0px 0px rgba(0,0,0,0) !important;
+}
+input[type='button'].collapse{
+	background:url('collapse.gif') 4px 3px no-repeat;
+	padding-left:20px;
+}
+input[type='button'].expand{
+	background:url('expand.gif') 4px 3px no-repeat;
+	padding-left:20px;
+}
+
+/* RADIO INPUTS */
+#chatsidediv{/*wrapperboxes*/
+	height:29px;
+	display:block;
+	border:1px solid #686868;
+	border-radius:16px;
+	background:#686868;
+	background-image:linear-gradient(to bottom,#666,#888 40%,#999 85%,#888 100%);
+	padding:3px;
+	position:relative;
+	z-index:1;
+}
+#chatsidediv .radio-bg{/*background div to indicate selection*/
+	height:27px;
+	background:#999;
+	background-image:linear-gradient(to bottom,#888,#AAA);
+	border:1px solid #999;
+	border-radius:16px;
+	box-sizing:border-box;
+	box-shadow:1px 1px 6px rgba(0,0,0,1);
+	position:relative;
+	top:-28px;
+	z-index:2;
+    transition: margin 0.5s;
+}
+label.is-radio {position:relative;z-index:3;}
+input[type='radio']+label.is-radio{
+	display:block;
+	float:left;
+	padding:5px 7px;
+	margin:0px;
+	text-align:center;
+}
+input[type='radio']:not(:checked)+label.is-radio:hover,
+input[type='checkbox']+label:hover,.shadow-on-hover:hover{
+	text-shadow:1px 1px 3px rgba(0,0,0,0.25);
+}
+input[type='radio']{display:none;}
+input[type='radio'],input[type='radio']:not(:checked)+label,
+input[type='checkbox'],input[type='checkbox']+label,
+input[type='button']{
+	cursor:pointer;
+}

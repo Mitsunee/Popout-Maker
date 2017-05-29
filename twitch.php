@@ -1,66 +1,55 @@
-<!DOCTYPE html>
+<!DOCTYPE html><?php $self="twitch";?>
 <html>
 <head>
-<title>Popout Maker</title>
-<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,700" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="/favicon.ico">
-<link rel="shortcut icon" href="/favicon.ico">
-<script src="/assets/googleanalytics.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<title>Popout-Maker Twitch</title>
+<?php require '/assets/inc/head.php';?>
 <script type="text/javascript">
-function GeneratePopout() { // STILL OLD!!
-	/*
-	- okay so... we gotta have some kinda frame.htm somewhere with ?channel=mitsunee_&chat=yes|no[&chatside=left|right] and javascript that ensures aspectratio
-	- if there's chat we need an extra 340px width
-	- why the fuck is there dubstep playing on hardbaseFM, like wtf??
-	- REMINDER that resizeTo resizes the full window, so you need to do some calc with outherwidth vs innerwidth
-	- also save the current width and height in a var, so we now which one changed (needs to be biased for height or width because of diagonal resize)
-	*/
+function GeneratePopout() { 
+	//reset error div
+	document.getElementById("channelnameemptyerror").style.display="none";
 	//get inputs
-	input = document.getElementById('popouturl').value;
-	//filter input (no spaces, lower case only, a-z,0-9,_ only)
-	input = input.toLowerCase().trim();//document.getElementById('popouturl').value.trim().toLowerCase().replace(\[^a-z0-9_]+\g,"") THAT GOOD MOM?
-	if(input=="") return false;//nice input
+	input = document.getElementById('popouturl').value.toLowerCase().replace(/[^a-z0-9_]+/gi,"");
+	if(input=="") {document.getElementById("channelnameemptyerror").style.display="block";return false;};//nice input
 	inputwidth = document.getElementById('inputwidth').value;
 	inputheight = document.getElementById('inputheight').value;
-	chatoption = document.getElementById('showchatchoice');
-	if(chatoption.checked) inputwidth = +inputwidth + 340;//add space for chat, if enabled
-	chatsideoption = $('input[name="chatsidechoice"]:checked').val();
+	chatoption = radioValue("chatsidechoice");
+	if(chatoption!="none") inputwidth = +inputwidth + 340;//add space for chat, if enabled
 	//piece together preferences
 	popoutWindowpreferences = "width=" + inputwidth + ",height=" + inputheight + ",status=no,scrollbars=no,resizable=yes,location=no,menubar=no";
-	// **DEBUG ONLY **
-	debug = "";
-	debug += popoutWindowpreferences + "<br>";
-	debug += input + " ";
-	if(chatoption.checked) {debug += "with chat on " + chatsideoption + " side";} else {debug += "without chat";}
-	document.getElementById('debugDIV').innerHTML = debug;
-	// **DEBUG END **
-	//popoutWindow = window.open(input, "pmpopout", popoutWindowpreferences);
-	//popoutWindow.focus();
+	windowLink = "/frame/twitchframe.php?channel="+input+"&chat="+chatoption;
+	popoutWindow = window.open(windowLink, "pmpopout", popoutWindowpreferences);
+	popoutWindow.focus();
 }
-function ToggleChat(chatchoicedivvalue) {
-	chatchoicediv = document.getElementById("chatsidediv");
-	if(chatchoicedivvalue) {
-		chatchoicediv.style.display="block";
+function ToggleChat(radioNum) {
+	chatsizenote = document.getElementById("chatsizenote");
+	if(radioValue("chatsidechoice")=="none"){
+		chatsizenote.style.visibility="hidden";
 	} else {
-		chatchoicediv.style.display="none";
+		chatsizenote.style.visibility="visible";	
 	}
+	document.getElementById("chatsidebg").className=radioNum;
 }
 </script>
-<script src="assets/aspectratio.js"></script>
-<script src="assets/radioValue.js"></script>
-<script src="assets/OpenTextbox.js"></script>
+<style>
+#chatsidediv{width:642px;}
+#chatsidediv .radio-bg{width:212px;}
+.radio-1 .radio-bg {margin-left:0px;}
+.radio-2 .radio-bg {margin-left:214px;}
+.radio-3 .radio-bg {margin-left:428px;}
+input[type='radio']+label.is-radio{width:200px;}
+</style>
 </head>
 <body>
-<h1 id="title">Popout Maker - <span style="color:#aa00ff;font-weight:400;">Twitch</span></h1><hr>
+<h1 id="title">Popout Maker - <span style="color:#6441a5;">Twitch</span></h1><hr>
 <div id="main">
+<noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
+<div class="errorwrapper" id="channelnameemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Channel name cannot be empty</div></div>
 <p>Enter channel name here:<br>
 <input type="text" name="popouturl" value="" id="popouturl" style="width:500px"></p>
 <table>
 	<tr>
 		<td>Window width:</td>
-		<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"></td>
+		<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"><span id="chatsizenote" class="note">+340</td>
 	</tr>
 	<tr>
 		<td>Window height:</td>
@@ -71,17 +60,12 @@ function ToggleChat(chatchoicedivvalue) {
 	</tr>
 </table>
 <p>
-	<input type="checkbox" name="showchatchoice" id="showchatchoice" onChange="ToggleChat(this.checked);" checked><label for="showchatchoice"> Show Chat</label>
 	<div id="chatsidediv">
-		<input type="radio" name="chatsidechoice" id="chatsideleft" value="left"><label for="chatsideleft"> Show chat on the left side</label><br>
-		<input type="radio" name="chatsidechoice" id="chatsideright" value="right" checked><label for="chatsideright"> Show chat on the right side</label>
+		<input type="radio" name="chatsidechoice" id="chatsideleft" value="left" onChange="ToggleChat('radio-1');"><label for="chatsideleft" class="is-radio"> Show chat on the left side</label>
+		<input type="radio" name="chatsidechoice" id="chatsidenone" value="none" onChange="ToggleChat('radio-2');"><label for="chatsidenone" class="is-radio"> Don't show chat</label>
+		<input type="radio" name="chatsidechoice" id="chatsideright" value="right" onChange="ToggleChat('radio-3');" checked><label for="chatsideright" class="is-radio"> Show chat on the right side</label>
+		<div style="clear:both;" class="radio-3" id="chatsidebg"><div class="radio-bg"></div></div>
 	</div>
 </p>
-<p>
-	<input type="button" onclick="GeneratePopout();" value="Generate Popout"> frame.htm next
-</p>
-<p>Also check out:<br>
-<a href="/youtube" style="color:inherit !important;text-decoration:none;">Popout Maker - <span style="font-weight:400;">You<span class="Tube">Tube</span></span></a></p>
-<div id="debugDIV"></div>
-<div id="footer">Made by <a href="http://twitter.com/Mitsunee">Mitsunee</a><span style="float:right;"><a href="/about" target="_blank">About</a> | Version: 1.0 (<a href="/changelog" target="_blank">changelog</a>)</span></div>
-</body></html>
+<p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
+<?php require '/assets/inc/footer.php';?>

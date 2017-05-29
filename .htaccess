@@ -2,4 +2,3 @@ RewriteEngine on
 RewriteRule ^youtube youtube.php
 RewriteRule ^twitch twitch.php
 RewriteRule ^changelog changelog.php
-RewriteRule ^about about.php
