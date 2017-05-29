@@ -34,24 +34,25 @@ function GeneratePopout() {
 <body>
 <h1 id="title">Popout Maker</h1><hr>
 <div id="main">
-<div class="errorwrapper" id="linkemptyerror" style="display:none;"><img src="../assets/warning.png" alt="!"><div>You must enter a URL to open.</div></div>
+<noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
+<div class="errorwrapper" id="linkemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>You must enter a URL to open.</div></div>
 <p>Enter your url here:<br>
-<input type="url" name="popouturl" value="" id="popouturl"></p>
-<div id="advanced_options_closed" style="display:block;"><input type="button" class="ninja expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
+<input type="url" name="popouturl" value="" placeholder="http://" id="popouturl"></p>
+<div id="advanced_options_closed" style="display:block;"><input type="button" class="ninja shadow-on-hover expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
 <div id="advanced_options_open" style="display:none;">
-	<input type="button" class="ninja collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
+	<input type="button" class="ninja shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
 	<table>
 		<tr>
 			<td>Window width:</td>
 			<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"></td>
-			<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option">Keep 16:9 aspect ratio</td>
+			<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option"><label for="keep169option">Keep 16:9 aspect ratio</label></td>
 		</tr>
 		<tr>
 			<td>Window height:</td>
 			<td><input type="number" name="height" id="inputheight" min="100" value="720" oninput="aspectratio(this,'inputwidth','keep169option',9);"></td>
 		</tr>
 	</table>
-	<p><label><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"> Disable Scrollbars </label><span class="note">Firefox & IE only</span></p>
+	<p><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"><label for="scrollbarsoption">Disable Scrollbars </label><span class="note">Firefox & IE only</span></p>
 	<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
 </div>
 <p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>

@@ -74,24 +74,26 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 <body>
 <h1 id="title">Popout Maker - <span style="font-weight:400;">You<span class="Tube" style="font-weight:700;">Tube</span></span></h1><hr>
 <div id="main">
-<div class="errorwrapper" id="videoiderror" style="display:none;"><img src="../assets/warning.png" alt="!"><div>Couldn't find video ID.</div></div>
-<div class="errorwrapper" id="playlistiderror" style="display:none;"><img src="../assets/warning.png" alt="!"><div>Couldn't find playlist ID. If there's no playlist in your url, please remove the checkmark below.</div></div>
+<noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
+<div class="errorwrapper" id="videoiderror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Couldn't find video ID.</div></div>
+<div class="errorwrapper" id="playlistiderror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Couldn't find playlist ID. If there's no playlist in your url, please remove the checkmark below.</div></div>
 <p>Enter your youtube url here:<br>
-<input type="url" name="popouturl" value="" id="popouturl"></label></p>
-<input type="checkbox" id="playlisttrigger"><label for="playlisttrigger">Include Playlist</label>
-<div id="advanced_options_closed" style="display:block;"><input type="button" class="ninja expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
+<input type="url" name="popouturl" value="" placeholder="http://www.youtube.com/watch?v=" id="popouturl"><br>
+<input type="checkbox" id="playlisttrigger" style="margin-top:8px;"><label for="playlisttrigger">Include Playlist</label></p>
+<div id="advanced_options_closed" style="display:block;"><input type="button" class="ninja shadow-on-hover expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
 <div id="advanced_options_open" style="display:none;">
-	<input type="button" class="ninja collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
+	<input type="button" class="ninja shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
 	<p>
-		<label><input type="checkbox" id="autoplayoption" checked="checked"> Enable Autoplay</label><br>
-		<label><input type="checkbox" id="annotationsoption" checked="checked"> Enable Annotations</label><br>
-		<label><input type="checkbox" id="loopoption"> Enable Looping </label><span class="note">*<br>Loops single video or the playlist. When looping a single video, youtube creates a temporary playlist with the same video two times.</span>
+		<input type="checkbox" id="autoplayoption" checked="checked"><label for=autoplayoption"">Enable Autoplay</label><br>
+		<input type="checkbox" id="annotationsoption" checked="checked"><label for="annotationsoption">Enable Annotations</label><br>
+		<input type="checkbox" id="loopoption"><label for="loopoption">Enable Looping </label><span class="note">*<br>
+		Loops single video or the playlist. When looping a single video, youtube creates a temporary playlist with the same video two times.</span>
 	</p>
 	<table>
 		<tr>
 			<td>Window width:</td>
 			<td><input type="number" name="width" id="inputwidth" min="100" value="1280" onChange="aspectratio(this,'inputheight','keep169option',16);"></td>
-			<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option" checked="checked">Keep 16:9 aspect ratio</td>
+			<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option" checked="checked"><label for="keep169option">Keep 16:9 aspect ratio</label></td>
 		</tr>
 		<tr>
 			<td>Window height:</td>

@@ -42,7 +42,8 @@ input[type='radio']+label.is-radio{width:200px;}
 <body>
 <h1 id="title">Popout Maker - <span style="color:#6441a5;">Twitch</span></h1><hr>
 <div id="main">
-<div class="errorwrapper" id="channelnameemptyerror" style="display:none;"><img src="../assets/warning.png" alt="!"><div>Channel name cannot be empty</div></div>
+<noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
+<div class="errorwrapper" id="channelnameemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Channel name cannot be empty</div></div>
 <p>Enter channel name here:<br>
 <input type="text" name="popouturl" value="" id="popouturl" style="width:500px"></p>
 <table>
