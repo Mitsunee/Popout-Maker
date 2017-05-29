@@ -9,7 +9,7 @@ function GeneratePopout() {
 	document.getElementById("linkemptyerror").style.display="none";
 	//get input
 	input = document.getElementById('popouturl').value.trim();
-	if(input=="") {
+	if(input==""||input=="http://"||input=="https://") {
 		document.getElementById("linkemptyerror").style.display="block";
 		return false;
 	}
