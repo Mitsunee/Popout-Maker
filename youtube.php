@@ -72,8 +72,8 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 </script>
 </head>
 <body>
-<h1 id="title">Popout Maker - <span style="font-weight:400;">You<span class="Tube" style="font-weight:700;">Tube</span></span></h1><hr>
-<div id="main">
+<header>Popout Maker - <span style="font-weight:400;">You<span class="Tube" style="font-weight:700;">Tube</span></span></header><hr>
+<main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="videoiderror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Couldn't find video ID.</div></div>
 <div class="errorwrapper" id="playlistiderror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Couldn't find playlist ID. If there's no playlist in your url, please remove the checkmark below.</div></div>

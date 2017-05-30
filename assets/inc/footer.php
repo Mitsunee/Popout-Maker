@@ -10,6 +10,6 @@ if($self=="twitch") {
 }
 ?></p>
 <p class="note" style="font-size:14px !important">Tip: Try using an external program, to make your popout windows 'always on top'.</p>
-</div>
-<div id="footer">Made by <a href="http://www.mitsunee.com">Mitsunee</a><span style="float:right;"><a href="https://github.com/Mitsunee/Popout-Maker">About</a> | Version: 1.1 (<a href="https://github.com/Mitsunee/Popout-Maker/commits/master">changelog</a>)</span></div>
+</main>
+<footer>Made by <a href="http://www.mitsunee.com">Mitsunee</a><span style="float:right;"><a href="https://github.com/Mitsunee/Popout-Maker">About</a> | Version: 1.1 (<a href="https://github.com/Mitsunee/Popout-Maker/commits/master">changelog</a>)</span></footer>
 </body></html>
