@@ -35,7 +35,10 @@ This version (1.1) is an in-development version, it brought the Twitch-version a
 ## Current goals:
 
 
-- *twitch:* js funstufftm to get rid of black bars automatically (but ask for permission once)
+- `<nav>`-bar instead of a list of links under the content
+- adding `<form>` tags in all 3 pages and converting the Generate-button to `<input type="submit">`
+
+next version:  
 - Using PHP to allow presets via GET variables
 - Adding buttons to copy or bookmark a preset-link
 - A small wiki showcasing all preset variables and a general guide for all 3 versions

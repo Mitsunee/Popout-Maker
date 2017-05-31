@@ -18,8 +18,27 @@ header {
 	width:80%;
 	box-shadow:3px 3px 10px #666;
 	font-weight:700;
-	font-size:2em;
+	font-size:32px;
 	height:61px;
+}
+header img:first-of-type{
+	height:40px;
+	width:40px;
+}
+header img+span{
+	position:relative;
+	top:-9px;
+	left:12px;
+}
+header img[alt="YouTube"]{
+	position:relative;
+	top:-3px;
+	left:12px;
+}
+header img[alt="Twitch"]{
+	position:relative;
+	top:-5px;
+	left:16px;
 }
 hr {
 	border-top:0px;

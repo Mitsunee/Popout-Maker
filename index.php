@@ -32,7 +32,7 @@ function GeneratePopout() {
 </script>
 </head>
 <body>
-<header>Popout Maker</header><hr>
+<header><img src="/assets/icon64.gif" alt="Icon"><span>Popout-Maker</span></header><hr>
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="linkemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>You must enter a URL to open.</div></div>
