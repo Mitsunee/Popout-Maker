@@ -77,29 +77,31 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="videoiderror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Couldn't find video ID.</div></div>
 <div class="errorwrapper" id="playlistiderror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Couldn't find playlist ID. If there's no playlist in your url, please remove the checkmark below.</div></div>
-<p>Enter your youtube url here:<br>
-<input type="url" name="popouturl" value="" placeholder="http://www.youtube.com/watch?v=" id="popouturl"><br>
-<input type="checkbox" id="playlisttrigger" style="margin-top:8px;"><label for="playlisttrigger">Include Playlist</label></p>
-<div id="advanced_options_closed" style="display:block;"><input type="button" class="ninja shadow-on-hover expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
-<div id="advanced_options_open" style="display:none;">
-	<input type="button" class="ninja shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
-	<p>
-		<input type="checkbox" id="autoplayoption" checked="checked"><label for=autoplayoption"">Enable Autoplay</label><br>
-		<input type="checkbox" id="annotationsoption" checked="checked"><label for="annotationsoption">Enable Annotations</label><br>
-		<input type="checkbox" id="loopoption"><label for="loopoption">Enable Looping </label><span class="note">*<br>
-		Loops single video or the playlist. When looping a single video, youtube creates a temporary playlist with the same video two times.</span>
-	</p>
-	<table>
-		<tr>
-			<td>Window width:</td>
-			<td><input type="number" name="width" id="inputwidth" min="100" value="1280" onChange="aspectratio(this,'inputheight','keep169option',16);"></td>
-			<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option" checked="checked"><label for="keep169option">Keep 16:9 aspect ratio</label></td>
-		</tr>
-		<tr>
-			<td>Window height:</td>
-			<td><input type="number" name="height" id="inputheight" min="100" value="720" onChange="aspectratio(this,'inputwidth','keep169option',9);"></td>
-		</tr>
-	</table>
-</div>
-<p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
+<form action="javascript:void(0);" onsubmit="GeneratePopout();return false;">
+	<p>Enter your youtube url here:<br>
+	<input type="url" name="popouturl" value="" placeholder="http://www.youtube.com/watch?v=" id="popouturl"><br>
+	<input type="checkbox" id="playlisttrigger" style="margin-top:8px;"><label for="playlisttrigger">Include Playlist</label></p>
+	<div id="advanced_options_closed" style="display:block;"><input type="button" class="shadow-on-hover expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
+	<div id="advanced_options_open" style="display:none;">
+		<input type="button" class="shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
+		<p>
+			<input type="checkbox" id="autoplayoption" checked="checked"><label for=autoplayoption">Enable Autoplay</label><br>
+			<input type="checkbox" id="annotationsoption" checked="checked"><label for="annotationsoption">Enable Annotations</label><br>
+			<input type="checkbox" id="loopoption"><label for="loopoption">Enable Looping </label><span class="note">*<br>
+			Loops single video or the playlist. When looping a single video, youtube creates a temporary playlist with the same video two times.</span>
+		</p>
+		<table>
+			<tr>
+				<td>Window width:</td>
+				<td><input type="number" name="width" id="inputwidth" min="100" value="1280" onChange="aspectratio(this,'inputheight','keep169option',16);"></td>
+				<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option" checked="checked"><label for="keep169option">Keep 16:9 aspect ratio</label></td>
+			</tr>
+			<tr>
+				<td>Window height:</td>
+				<td><input type="number" name="height" id="inputheight" min="100" value="720" onChange="aspectratio(this,'inputwidth','keep169option',9);"></td>
+			</tr>
+		</table>
+	</div>
+	<p><input type="submit" value="Generate Popout"></p>
+</form>
 <?php require '/assets/inc/footer.php';?>

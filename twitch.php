@@ -44,28 +44,30 @@ input[type='radio']+label.is-radio{width:200px;}
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="channelnameemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Channel name cannot be empty</div></div>
-<p>Enter channel name here:<br>
-<input type="text" name="popouturl" value="" id="popouturl" style="width:500px"></p>
-<table>
-	<tr>
-		<td>Window width:</td>
-		<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"><span id="chatsizenote" class="note">+340</td>
-	</tr>
-	<tr>
-		<td>Window height:</td>
-		<td><input type="number" name="height" id="inputheight" min="100" value="720" oninput="aspectratio(this,'inputwidth','keep169option',9);"></td>
-	</tr>
-	<tr>
-		<td class="note" colspan="2">If activated space for chat will automatically be added<input type="checkbox" id="keep169option" name="keep169option" style="display:none;" checked></td>
-	</tr>
-</table>
-<p>
-	<div id="chatsidediv">
-		<input type="radio" name="chatsidechoice" id="chatsideleft" value="left" onChange="ToggleChat('radio-1');"><label for="chatsideleft" class="is-radio"> Show chat on the left side</label>
-		<input type="radio" name="chatsidechoice" id="chatsidenone" value="none" onChange="ToggleChat('radio-2');"><label for="chatsidenone" class="is-radio"> Don't show chat</label>
-		<input type="radio" name="chatsidechoice" id="chatsideright" value="right" onChange="ToggleChat('radio-3');" checked><label for="chatsideright" class="is-radio"> Show chat on the right side</label>
-		<div style="clear:both;" class="radio-3" id="chatsidebg"><div class="radio-bg"></div></div>
-	</div>
-</p>
-<p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
+<form action="javascript:void(0);" onsubmit="GeneratePopout();return false;">
+	<p>Enter channel name here:<br>
+		<input type="text" name="popouturl" value="" id="popouturl" style="width:500px"></p>
+	<table>
+		<tr>
+			<td>Window width:</td>
+			<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"><span id="chatsizenote" class="note">+340</td>
+		</tr>
+		<tr>
+			<td>Window height:</td>
+			<td><input type="number" name="height" id="inputheight" min="100" value="720" oninput="aspectratio(this,'inputwidth','keep169option',9);"></td>
+		</tr>
+		<tr>
+			<td class="note" colspan="2">If activated space for chat will automatically be added<input type="checkbox" id="keep169option" name="keep169option" style="display:none;" checked></td>
+		</tr>
+	</table>
+	<p>
+		<div id="chatsidediv">
+			<input type="radio" name="chatsidechoice" id="chatsideleft" value="left" onChange="ToggleChat('radio-1');"><label for="chatsideleft" class="is-radio"> Show chat on the left side</label>
+			<input type="radio" name="chatsidechoice" id="chatsidenone" value="none" onChange="ToggleChat('radio-2');"><label for="chatsidenone" class="is-radio"> Don't show chat</label>
+			<input type="radio" name="chatsidechoice" id="chatsideright" value="right" onChange="ToggleChat('radio-3');" checked><label for="chatsideright" class="is-radio"> Show chat on the right side</label>
+			<div style="clear:both;" class="radio-3" id="chatsidebg"><div class="radio-bg"></div></div>
+		</div>
+	</p>
+	<p><input type="submit" value="Generate Popout"></p>
+</form>
 <?php require '/assets/inc/footer.php';?>

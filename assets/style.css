@@ -113,36 +113,39 @@ footer{
 input[type='url']{
 	width:500px;
 }
-input[type='button']{
+/*buttons*/
+input[type='button'],input[type='submit']{
 	font-family:'Exo 2',sans-serif;
 	font-weight:300;
+}
+/*submit button*/
+input[type='submit']{
 	background:#BBB;
 	background-image:linear-gradient(to bottom,#AAA,#CCC);
 	border:1px solid #999;
 	border-radius:8px;
 	box-shadow:1px 1px 3px rgba(0,0,0,0.75);
 }
-input[type='button']:hover{
+input[type='submit']:hover{
 	border:1px solid #AAA;
 	background:#CCC;
 	background-image:linear-gradient(to bottom,#DDD,#CCC);
 	box-shadow:1px 1px 3px rgba(0,0,0,1);
 }
-input[type='button']:not(.ninja):active{
+input[type='submit']:active{
 	transform:translateY(2px);
 }
-input[type='button'].ninja{
-	padding-left:15px;
+/*text style buttons*/
+input[type='button'].collapse,input[type='button'].expand{
+	padding-left:20px;
 	border:0px !important;
 	box-shadow:0px 0px 0px rgba(0,0,0,0) !important;
 }
 input[type='button'].collapse{
 	background:url('collapse.gif') 4px 3px no-repeat;
-	padding-left:20px;
 }
 input[type='button'].expand{
 	background:url('expand.gif') 4px 3px no-repeat;
-	padding-left:20px;
 }
 
 /* RADIO INPUTS */
@@ -185,6 +188,6 @@ input[type='checkbox']+label:hover,.shadow-on-hover:hover{
 input[type='radio']{display:none;}
 input[type='radio'],input[type='radio']:not(:checked)+label,
 input[type='checkbox'],input[type='checkbox']+label,
-input[type='button']{
+input[type='button'],input[type='submit']{
 	cursor:pointer;
 }
