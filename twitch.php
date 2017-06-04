@@ -31,7 +31,7 @@ function ToggleChat(radioNum) {
 }
 </script>
 <style>
-#chatsidediv{width:642px;}
+#chatsidediv{width:642px;margin-top:16px;}
 #chatsidediv .radio-bg{width:212px;}
 .radio-1 .radio-bg {margin-left:0px;}
 .radio-2 .radio-bg {margin-left:214px;}
@@ -52,7 +52,7 @@ input[type='radio']+label.is-radio{width:200px;}
 	<table>
 		<tr>
 			<td>Window width:</td>
-			<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"><span id="chatsizenote" class="note">+340</td>
+			<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"><span id="chatsizenote" class="note">+340</span></td>
 		</tr>
 		<tr>
 			<td>Window height:</td>
@@ -62,14 +62,12 @@ input[type='radio']+label.is-radio{width:200px;}
 			<td class="note" colspan="2">If activated space for chat will automatically be added<input type="checkbox" id="keep169option" name="keep169option" style="display:none;" checked></td>
 		</tr>
 	</table>
-	<p>
 		<div id="chatsidediv">
 			<input type="radio" name="chatsidechoice" id="chatsideleft" value="left" onChange="ToggleChat('radio-1');"><label for="chatsideleft" class="is-radio"> Show chat on the left side</label>
 			<input type="radio" name="chatsidechoice" id="chatsidenone" value="none" onChange="ToggleChat('radio-2');"><label for="chatsidenone" class="is-radio"> Don't show chat</label>
 			<input type="radio" name="chatsidechoice" id="chatsideright" value="right" onChange="ToggleChat('radio-3');" checked><label for="chatsideright" class="is-radio"> Show chat on the right side</label>
 			<div style="clear:both;" class="radio-3" id="chatsidebg"><div class="radio-bg"></div></div>
 		</div>
-	</p>
 	<p><input type="submit" value="Generate Popout"></p>
 </form>
 <?php require 'assets/inc/footer.php';?>
