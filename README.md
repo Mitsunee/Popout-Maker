@@ -1,4 +1,5 @@
 <img src="https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/icon64.gif" align="right">
+
 # Popout-Maker
 
 > Utility to generate custom Popout Windows with any browser
