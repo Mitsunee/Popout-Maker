@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Popout-Maker Twitch</title>
-<?php require '/assets/inc/head.php';?>
+<?php require 'assets/inc/head.php';?>
 <script type="text/javascript">
 function GeneratePopout() { 
 	//reset error div
@@ -41,7 +41,7 @@ input[type='radio']+label.is-radio{width:200px;}
 </head>
 <body>
 <header><img src="/assets/icon64tw.png" alt="Icon"><span>Popout-Maker </span><img src="/assets/logo32tw.png" alt="Twitch"></header>
-<?php require '/assets/inc/nav.php';?>
+<?php require 'assets/inc/nav.php';?>
 <hr style="clear:both;">
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
@@ -72,4 +72,4 @@ input[type='radio']+label.is-radio{width:200px;}
 	</p>
 	<p><input type="submit" value="Generate Popout"></p>
 </form>
-<?php require '/assets/inc/footer.php';?>
+<?php require 'assets/inc/footer.php';?>

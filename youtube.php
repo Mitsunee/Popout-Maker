@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Popout-Maker YouTube</title>
-<?php require '/assets/inc/head.php';?>
+<?php require 'assets/inc/head.php';?>
 <script type="text/javascript">
 function GeneratePopout() {
 	//reset error divs
@@ -73,7 +73,7 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 </head>
 <body>
 <header><img src="/assets/icon64yt.png" alt="Icon"><span>Popout-Maker </span><img src="/assets/logo32yt.png" alt="YouTube"></header>
-<?php require '/assets/inc/nav.php';?>
+<?php require 'assets/inc/nav.php';?>
 <hr style="clear:both;">
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
@@ -106,4 +106,4 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 	</div>
 	<p><input type="submit" value="Generate Popout"></p>
 </form>
-<?php require '/assets/inc/footer.php';?>
+<?php require 'assets/inc/footer.php';?>

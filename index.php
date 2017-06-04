@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Popout-Maker</title>
-<?php require '/assets/inc/head.php';?>
+<?php require 'assets/inc/head.php';?>
 <script type="text/javascript">
 function GeneratePopout() {
 	//reset error divs
@@ -33,7 +33,7 @@ function GeneratePopout() {
 </head>
 <body>
 <header><img src="/assets/icon64.gif" alt="Icon"><span>Popout-Maker</span></header>
-<?php require '/assets/inc/nav.php';?>
+<?php require 'assets/inc/nav.php';?>
 <hr style="clear:both;">
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
@@ -60,4 +60,4 @@ function GeneratePopout() {
 	</div>
 	<p><input type="submit" value="Generate Popout"></p>
 </form>
-<?php require '/assets/inc/footer.php';?>
+<?php require 'assets/inc/footer.php';?>
