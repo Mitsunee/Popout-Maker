@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Mitsunee/Popout-Maker/master/assets/icon64.gif" align="right">
+<img src="http://popoutmaker.mitsunee.com/assets/icon64.gif" align="right">
 
 # Changelog
 
@@ -29,3 +29,6 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 - Twitch
 	- The new Twitch Popouts are now available  
 	Twitch Popouts use a special `frame.htm` page that optionally allows to embed the chat in addition to the actual stream. Which side is your choice. The only required input is the channel name of the channel you want in your popout.
+- Update 1.1.1
+	- *Internal*: Removed slashes in all `require`s. They weren't finding their files, because Popout-Maker isn't in the root directory on the live server.
+	- *Internal*: Images in README.md and CHANGELOG.md are now hosted on the live server.
