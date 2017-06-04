@@ -40,7 +40,9 @@ input[type='radio']+label.is-radio{width:200px;}
 </style>
 </head>
 <body>
-<header><img src="/assets/icon64tw.png" alt="Icon"><span>Popout-Maker </span><img src="/assets/logo32tw.png" alt="Twitch"></header><hr>
+<header><img src="/assets/icon64tw.png" alt="Icon"><span>Popout-Maker </span><img src="/assets/logo32tw.png" alt="Twitch"></header>
+<?php require '/assets/inc/nav.php';?>
+<hr style="clear:both;">
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="channelnameemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Channel name cannot be empty</div></div>

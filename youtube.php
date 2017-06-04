@@ -72,7 +72,9 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 </script>
 </head>
 <body>
-<header><img src="/assets/icon64yt.png" alt="Icon"><span>Popout-Maker </span><img src="/assets/logo32yt.png" alt="YouTube"></header><hr>
+<header><img src="/assets/icon64yt.png" alt="Icon"><span>Popout-Maker </span><img src="/assets/logo32yt.png" alt="YouTube"></header>
+<?php require '/assets/inc/nav.php';?>
+<hr style="clear:both;">
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="videoiderror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>Couldn't find video ID.</div></div>

@@ -12,8 +12,10 @@ header {
 	background-image:linear-gradient(to bottom right,#bbb,#888);
 	border-bottom: 1px solid #777;
 	border-right: 1px solid #777;
+	border-top-left-radius:12px;
+	border-top-right-radius:12px;
 	padding:10px;
-	margin:5px;
+	margin:5px 5px 0px 5px;
 	box-sizing: border-box;
 	width:80%;
 	box-shadow:3px 3px 10px #666;
@@ -40,11 +42,44 @@ header img[alt="Twitch"]{
 	top:-5px;
 	left:16px;
 }
+nav{
+	display:block;
+	position:relative;
+	background:#F80;
+	padding:0px;
+	margin:0px 5px;
+	box-sizing: border-box;
+	width:80%;	
+}
+nav > a:link,nav > a:visited{
+	display:block;
+	float:left;
+	overflow:hidden;
+	padding:3px 8px;
+	background:#999;
+	background-image:linear-gradient(to bottom,#bbb,#888);
+	border-bottom: 1px solid #777;
+	border-right: 1px solid #777;
+}
+nav > a:first-of-type{border-bottom-left-radius:12px;}
+nav > a:last-of-type{border-bottom-right-radius:12px;}
+nav > a:hover{
+	background:#AAA;
+	background-image:linear-gradient(to bottom,#ccc,#aaa);
+}
+nav img{
+	margin-right:3px;
+	position:relative;
+	width:16px;
+	height:16px;
+	top:1px;
+}
 hr {
 	border-top:0px;
 	border-bottom:1px solid #666;
 	margin-bottom:0px;
 	padding-bottom:0px;
+	padding-top:12px;
 }
 main {
 	margin:10px;
