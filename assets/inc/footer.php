@@ -5,5 +5,5 @@ if($self=="twitch") {
 	echo '.png" style="position:relative;top:6px;"> Now Live <span style="font-size:0.8em">(Stream announcing bot for Discord)</span></a></p>'."\n";
 }
 ?></main>
-<footer>Made by <a href="http://www.mitsunee.com">Mitsunee</a><span style="float:right;"><a href="https://github.com/Mitsunee/Popout-Maker"><img src="/assets/icon16git.png" alt="GitHub"> About</a> | Version: 1.1 (<a href="https://github.com/Mitsunee/Popout-Maker/commits/master">changelog</a>)</span></footer>
+<footer>Made by <a href="http://www.mitsunee.com">Mitsunee</a><span style="float:right;"><a href="https://github.com/Mitsunee/Popout-Maker" class="gitlink">About</a> | Version: 1.1 (<a href="https://github.com/Mitsunee/Popout-Maker/commits/master">changelog</a>)</span></footer>
 </body></html>

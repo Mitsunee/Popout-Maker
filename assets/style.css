@@ -55,24 +55,57 @@ nav > a:link,nav > a:visited{
 	display:block;
 	float:left;
 	overflow:hidden;
+	white-space:nowrap;
+	width:16px;
+	max-height:19px;
 	padding:3px 8px;
 	background:#999;
 	background-image:linear-gradient(to bottom,#bbb,#888);
 	border-bottom: 1px solid #777;
 	border-right: 1px solid #777;
+	text-align:center;
+	transition:width 0.25s;
 }
 nav > a:first-of-type{border-bottom-left-radius:12px;}
 nav > a:last-of-type{border-bottom-right-radius:12px;}
 nav > a:hover{
+	width:140px;
 	background:#AAA;
 	background-image:linear-gradient(to bottom,#ccc,#aaa);
 }
+nav > a::before{
+	display:block;
+	float:left;
+	width:33px;
+	height:26px;
+	content:'';
+	position:relative;
+	top:-3px;
+	left:-8px;
+	border-right: 1px solid #777;
+}/*
 nav img{
 	margin-right:3px;
 	position:relative;
+	top:1px;
+	float:left;
 	width:16px;
 	height:16px;
-	top:1px;
+}*/
+nav > a[href='/']::before {
+	background-image:url('/assets/icon16.png'),linear-gradient(to bottom,#bbb,#888);
+	background-repeat:no-repeat,repeat;
+	background-position:center center,0px 0px;
+}
+nav > a[href='/youtube']::before {
+	background-image:url('/assets/icon16yt.png'),linear-gradient(to bottom,#bbb,#888);
+	background-repeat:no-repeat,repeat;
+	background-position:center center,0px 0px;
+}
+nav > a[href='/twitch']::before {
+	background-image:url('/assets/icon16tw.png'),linear-gradient(to bottom,#bbb,#888);
+	background-repeat:no-repeat,repeat;
+	background-position:center center,0px 0px;
 }
 hr {
 	border-top:0px;
@@ -126,6 +159,15 @@ a{
 }
 
 footer a{color:#C00;text-decoration:underline;}
+footer a.gitlink::before{
+	background-image:url('/assets/icon16git.png');
+	width:16px;
+	height:16px;
+	display:block;
+	content:'';
+	position:absolute;
+}
+footer a.gitlink{padding-left:18px;}
 footer{
 	display:block;
 	box-sizing:border-box;

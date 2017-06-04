@@ -35,8 +35,7 @@ This version (1.1) is an in-development version, it brought the Twitch-version a
 ## Current goals:
 
 
-- `<nav>`-bar instead of a list of links under the content
-- adding `<form>` tags in all 3 pages and converting the Generate-button to `<input type="submit">`
+- prepare for release
 
 next version:  
 - Using PHP to allow presets via GET variables
