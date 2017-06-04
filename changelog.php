@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Popout-Maker Changelog</title>
+<META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
 <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700' rel='stylesheet' type='text/css'>
 <link rel="icon" href="/favicon.ico">
 <link rel="shortcut icon" href="/favicon.ico">

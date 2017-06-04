@@ -1,4 +1,9 @@
 User-agent: *
-Disallow: /assets/*
+Disallow: /assets
 Disallow: /README.md
-Disallow: /frame/*
+Disallow: /CHANGELOG.md
+Disallow: /changelog
+Disallow: /favicon.ico
+Disallow: /frame
+Allow: /assets/icon64.gif
+Allow: /assets/icon16.png
