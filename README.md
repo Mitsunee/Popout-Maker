@@ -40,6 +40,7 @@ There is also dedicated pages for YouTube and Twitch popouts. The YouTube-versio
 
 The Twitch-version instead takes only the channel name and opens a similar popout that optionally also includes the chat:  
 ![Twitch Popout Screenshot](https://raw.githubusercontent.com/Mitsunee/Popout-Maker/twitch-beta/assets/gitimg4.png)
+> The chat can be seen on the right side next to the stream. Names were censored for this screenshot.
 
 <a name="status"></a>
 ## Current status:
