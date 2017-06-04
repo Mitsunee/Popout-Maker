@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html><?php $self="changelog";?>
 <html>
 <head>
-<title>Popout Maker - Changelog</title>
+<title>Popout-Maker Changelog</title>
+<META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
 <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="/favicon.ico">
 <link rel="shortcut icon" href="/favicon.ico">
-<script src="assets/googleanalytics.js"></script>
 <style>
 h2 {
 	font-weight:400;
@@ -25,15 +24,11 @@ h2 {
 <body>
 <h1 id="title">Popout Maker - Changelog</h1>
 <div id="main">
-<h2>1.1</h2>
-<div class="date">DD-MM-2016</div>
-<div class="description">Added a twitch version and reworked internal stuff</div>
+<h2>1.1+</h2>
+<div class="date">2017</div>
+<div class="description">Changelog moved to Github</div>
 <ul>
-	<li>Added a twitch version</li>
-	<li>Switched a few things from onchange to oninput</li>
-	<li>(TODO) Pages now get pieced together via PHP, so I don't need to update every file manually for each change</li>
-	<li>(TODO) Purged googleanalytics, as I have never checked it</li>
-	<li>(TO FINISH) switched to .htaccess RewriteRules instead of having multiple folders<li><!-- Current bug: on '/youtube' "assets/meow.png" goes to "/youtube/assets/meow.png" instead of "/assets/meow.png" -->
+	<li><a href="https://github.com/Mitsunee/Popout-Maker/commits/master">https://github.com/Mitsunee/Popout-Maker/commits/master</a></li>
 </ul>
 <h2>1.0</h2>
 <div class="date">04-13-2016</div>

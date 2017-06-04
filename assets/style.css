@@ -1,36 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,500,700');
 body {
 	margin:0px;
 	padding:0px;
 	background:#BBB;
 	min-width:1000px;
-	font-family:'Exo', sans-serif;
+	font-family:'Exo 2', sans-serif;
 	font-weight:300;
 }
-#title {
+header {
 	background:#999;
 	background-image:linear-gradient(to bottom right,#bbb,#888);
 	border-bottom: 1px solid #777;
 	border-right: 1px solid #777;
+	border-top-left-radius:12px;
+	border-top-right-radius:12px;
 	padding:10px;
-	margin:5px;
+	margin:5px 5px 0px 5px;
 	box-sizing: border-box;
 	width:80%;
 	box-shadow:3px 3px 10px #666;
 	font-weight:700;
-	font-size:2em;
+	font-size:32px;
+	height:61px;
+}
+header img:first-of-type{
+	height:40px;
+	width:40px;
+}
+header img+span{
+	position:relative;
+	top:-9px;
+	left:12px;
+}
+header img[alt="YouTube"]{
+	position:relative;
+	top:-3px;
+	left:12px;
+}
+header img[alt="Twitch"]{
+	position:relative;
+	top:-5px;
+	left:16px;
+}
+nav{
+	display:block;
+	position:relative;
+	background:#F80;
+	padding:0px;
+	margin:0px 5px;
+	box-sizing: border-box;
+	width:80%;	
+}
+nav > a:link,nav > a:visited{
+	display:block;
+	float:left;
+	overflow:hidden;
+	white-space:nowrap;
+	width:16px;
+	max-height:19px;
+	padding:3px 8px;
+	background:#999;
+	background-image:linear-gradient(to bottom,#bbb,#888);
+	border-bottom: 1px solid #777;
+	border-right: 1px solid #777;
+	text-align:center;
+	transition:width 0.25s;
+}
+nav > a:first-of-type{border-bottom-left-radius:12px;}
+nav > a:last-of-type{border-bottom-right-radius:12px;}
+nav > a:hover{
+	width:140px;
+	background:#AAA;
+	background-image:linear-gradient(to bottom,#ccc,#aaa);
+}
+nav > a::before{
+	display:block;
+	float:left;
+	width:33px;
+	height:26px;
+	content:'';
+	position:relative;
+	top:-3px;
+	left:-8px;
+	border-right: 1px solid #777;
+}/*
+nav img{
+	margin-right:3px;
+	position:relative;
+	top:1px;
+	float:left;
+	width:16px;
+	height:16px;
+}*/
+nav > a[href='/']::before {
+	background-image:url('/assets/icon16.png'),linear-gradient(to bottom,#bbb,#888);
+	background-repeat:no-repeat,repeat;
+	background-position:center center,0px 0px;
+}
+nav > a[href='/youtube']::before {
+	background-image:url('/assets/icon16yt.png'),linear-gradient(to bottom,#bbb,#888);
+	background-repeat:no-repeat,repeat;
+	background-position:center center,0px 0px;
+}
+nav > a[href='/twitch']::before {
+	background-image:url('/assets/icon16tw.png'),linear-gradient(to bottom,#bbb,#888);
+	background-repeat:no-repeat,repeat;
+	background-position:center center,0px 0px;
 }
 hr {
 	border-top:0px;
 	border-bottom:1px solid #666;
 	margin-bottom:0px;
 	padding-bottom:0px;
+	padding-top:12px;
 }
-#main {
+main {
 	margin:10px;
 	padding:10px;
 	box-sizing:border-box;
 	border:1px solid #666;
 	background:#EEE;
+}
+a{
+	color:inherit;
+	text-decoration:none;
 }
 .Tube {
 	display:inline-block;
@@ -38,29 +131,20 @@ hr {
 	background:#E00;
 	background-image:linear-gradient(to bottom,#E00,#C00);
 	border-radius:14px;
-	padding:0px 5px;
+	padding:0px 5px 2px 5px;
 	margin-left:2px;
 }
 #playlisttriggerbox {
 	margin-left:16px;
 	overflow:hidden;
 }
-input[type='url']{
-	width:500px;
-}
-input[type='button']{
-	font-family:'Exo 2',sans-serif;
-}
-fieldset{
-	border:0px;
-	padding:0px;
-	margin:0px;
-}
+
 .note {
 	font-style:italic;
 	color:#444;
 	font-size:10px;
 }
+
 .errorwrapper div {
 	border:1px solid red;
 	color:red;
@@ -73,8 +157,18 @@ fieldset{
 .errorwrapper img {
 	float:left;
 }
-#footer a{color:#C00;}
-#footer{
+
+footer a{color:#C00;text-decoration:underline;}
+footer a.gitlink::before{
+	background-image:url('/assets/icon16git.png');
+	width:16px;
+	height:16px;
+	display:block;
+	content:'';
+	position:absolute;
+}
+footer a.gitlink{padding-left:18px;}
+footer{
 	display:block;
 	box-sizing:border-box;
 	height:21px;
@@ -88,4 +182,89 @@ fieldset{
 	font-size:14px;
 	padding:2px;
 }
+
+
+/* INPUTS */
 #inputwidth,#inputheight {width:45px;}
+
+input[type='url']{
+	width:500px;
+}
+/*buttons*/
+input[type='button'],input[type='submit']{
+	font-family:'Exo 2',sans-serif;
+	font-weight:300;
+}
+/*submit button*/
+input[type='submit']{
+	background:#BBB;
+	background-image:linear-gradient(to bottom,#AAA,#CCC);
+	border:1px solid #999;
+	border-radius:8px;
+	box-shadow:1px 1px 3px rgba(0,0,0,0.75);
+}
+input[type='submit']:hover{
+	border:1px solid #AAA;
+	background:#CCC;
+	background-image:linear-gradient(to bottom,#DDD,#CCC);
+	box-shadow:1px 1px 3px rgba(0,0,0,1);
+}
+input[type='submit']:active{
+	transform:translateY(2px);
+}
+/*text style buttons*/
+input[type='button'].collapse,input[type='button'].expand{
+	padding-left:20px;
+	border:0px !important;
+	box-shadow:0px 0px 0px rgba(0,0,0,0) !important;
+}
+input[type='button'].collapse{
+	background:url('collapse.gif') 4px 3px no-repeat;
+}
+input[type='button'].expand{
+	background:url('expand.gif') 4px 3px no-repeat;
+}
+
+/* RADIO INPUTS */
+#chatsidediv{/*wrapperboxes*/
+	height:29px;
+	display:block;
+	border:1px solid #686868;
+	border-radius:16px;
+	background:#686868;
+	background-image:linear-gradient(to bottom,#666,#888 40%,#999 85%,#888 100%);
+	padding:3px;
+	position:relative;
+	z-index:1;
+}
+#chatsidediv .radio-bg{/*background div to indicate selection*/
+	height:27px;
+	background:#999;
+	background-image:linear-gradient(to bottom,#888,#AAA);
+	border:1px solid #999;
+	border-radius:16px;
+	box-sizing:border-box;
+	box-shadow:1px 1px 6px rgba(0,0,0,1);
+	position:relative;
+	top:-28px;
+	z-index:2;
+    transition: margin 0.5s;
+}
+label.is-radio {position:relative;z-index:3;}
+input[type='radio']+label.is-radio{
+	display:block;
+	float:left;
+	padding:5px 7px;
+	margin:0px;
+	text-align:center;
+}
+input[type='radio']:not(:checked)+label.is-radio:hover,
+input[type='checkbox']+label:hover,.shadow-on-hover:hover{
+	text-shadow:1px 1px 3px rgba(0,0,0,0.25);
+}
+input[type='radio']{display:none;}
+input[type='radio'],input[type='radio']:not(:checked)+label,
+input[type='checkbox'],input[type='checkbox']+label,
+input[type='button'],input[type='submit']{
+	cursor:pointer;
+}

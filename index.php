@@ -1,17 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html><?php $self="index";?>
 <html>
 <head>
-<title>Popout Maker</title>
-<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,700" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="/favicon.ico">
-<link rel="shortcut icon" href="/favicon.ico">
-<script src="/assets/googleanalytics.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<title>Popout-Maker</title>
+<?php require '/assets/inc/head.php';?>
 <script type="text/javascript">
 function GeneratePopout() {
+	//reset error divs
+	document.getElementById("linkemptyerror").style.display="none";
+	//get input
 	input = document.getElementById('popouturl').value.trim();
-	if(input=="") return false;
+	if(input==""||input=="http://"||input=="https://") {
+		document.getElementById("linkemptyerror").style.display="block";
+		return false;
+	}
 	httpcheck = input.substring(0,7);
 	httpscheck = input.substring(0,8);
 	inputwidth = document.getElementById('inputwidth').value;
@@ -29,38 +30,34 @@ function GeneratePopout() {
 	popoutWindow.focus();
 }
 </script>
-<script src="assets/aspectratio.js"></script>
-<script src="assets/radioValue.js"></script>
-<script src="assets/OpenTextbox.js"></script>
 </head>
 <body>
-<h1 id="title">Popout Maker</h1><hr>
-<div id="main">
-<p>Enter your url here:<br>
-<input type="url" name="popouturl" value="" id="popouturl"></p>
-<div id="advanced_options_closed" style="display:block;"><input type="button" style="background:url('assets/expand.gif') 0px 4px no-repeat;padding-left:15px;border:0px;" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
-<div id="advanced_options_open" style="display:none;">
-	<input type="button" style="background:url('assets/collapse.gif') 0px 4px no-repeat;padding-left:15px;border:0px;" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
-	<table>
-		<tr>
-			<td>Window width:</td>
-			<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"></td>
-			<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option">Keep 16:9 aspect ratio</td>
-		</tr>
-		<tr>
-			<td>Window height:</td>
-			<td><input type="number" name="height" id="inputheight" min="100" value="720" oninput="aspectratio(this,'inputwidth','keep169option',9);"></td>
-		</tr>
-	</table>
-	<p><label><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"> Disable Scrollbars </label><span class="note">Firefox & IE only</span></p>
-	<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
-</div>
-<p><input type="button" onclick="GeneratePopout();" value="Generate Popout"></p>
-<p>Also check out:<br>
-<a href="/youtube" style="color:inherit !important;text-decoration:none;">Popout Maker - <span style="font-weight:400;">You<span class="Tube">Tube</span></span></a><br>
-<a href="/twitch" style="color:#aa00ff !important;text-decoration:none;">Popout Maker - <span style="font-weight:400;">Twitch</span></span></a></p>
-<p class="note" style="font-size:14px !important">Tip: Try using an external program, to make your popout windows 'always on top'.</p>
-</div>
-	<!--<div id="debugDIV"></div>-->
-<div id="footer">Made by <a href="http://twitter.com/Mitsunee">Mitsunee</a><span style="float:right;"><a href="/about" target="_blank">About</a> | Version: 1.0 (<a href="/changelog" target="_blank">changelog</a>)</span></div>
-</body></html>
+<header><img src="/assets/icon64.gif" alt="Icon"><span>Popout-Maker</span></header>
+<?php require '/assets/inc/nav.php';?>
+<hr style="clear:both;">
+<main>
+<noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
+<div class="errorwrapper" id="linkemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>You must enter a URL to open.</div></div>
+<form action="javascript:void(0);" onsubmit="GeneratePopout();return false;">
+	<p>Enter your url here:<br>
+		<input type="text" name="popouturl" value="" placeholder="http://" id="popouturl" style="width:500px"></p>
+	<div id="advanced_options_closed" style="display:block;"><input type="button" class="shadow-on-hover expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
+	<div id="advanced_options_open" style="display:none;">
+		<input type="button" class="shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
+		<table>
+			<tr>
+				<td>Window width:</td>
+				<td><input type="number" name="width" id="inputwidth" min="100" value="1280" oninput="aspectratio(this,'inputheight','keep169option',16);"></td>
+				<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option"><label for="keep169option">Keep 16:9 aspect ratio</label></td>
+			</tr>
+			<tr>
+				<td>Window height:</td>
+				<td><input type="number" name="height" id="inputheight" min="100" value="720" oninput="aspectratio(this,'inputwidth','keep169option',9);"></td>
+			</tr>
+		</table>
+		<p><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"><label for="scrollbarsoption">Disable Scrollbars </label><span class="note">Firefox & IE only</span></p>
+		<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
+	</div>
+	<p><input type="submit" value="Generate Popout"></p>
+</form>
+<?php require '/assets/inc/footer.php';?>
