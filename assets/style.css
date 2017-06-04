@@ -166,6 +166,7 @@ footer a.gitlink::before{
 	display:block;
 	content:'';
 	position:absolute;
+	bottom:2px;
 }
 footer a.gitlink{padding-left:18px;}
 footer{
