@@ -47,19 +47,15 @@ The chat can be seen on the right side next to the stream. Names were censored f
 <a name="status"></a>
 ## Current status:
 
-This version (1.1.1) is a recent release, it brought the Twitch-version and better styling.  
-Should any problems arise that didn't show up in testing, please open an Issue on Github.
-
 Version 1.2 will be the *Preset Update* and is currently in development in the v1.2-dev branch.
 
 <a name="goals"></a>
 ## Current goals:
 
-next version:  
-- Using PHP to allow presets via GET variables
-- Adding buttons to copy or bookmark a preset-link
-- A small wiki showcasing all preset variables and a general guide for all 3 versions
-- redo this file (again)
+[ ] Using PHP to allow presets via GET variables
+[ ] Adding buttons to copy or bookmark a preset-link
+[ ] A small wiki showcasing all preset variables and a general guide for all 3 versions
+[ ] redo this file (again)
 
 <a name="changelog"></a>
 ## Changelog

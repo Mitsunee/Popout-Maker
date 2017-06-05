@@ -6,7 +6,15 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 
 ## Contents
 
+- [Version 1.2 - Preset Update](#preset-update)
 - [Version 1.1 - Twitch Update](#twitch-update)
+
+<a name="#preset-update"></a>
+## Version 1.2 - Preset Update
+
+> This update brought Presets with a basic link based API
+
+- nothing yet c:
 
 <a name="#twitch-update"></a>
 ## Version 1.1 - Twitch Update
