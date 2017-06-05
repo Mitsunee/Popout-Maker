@@ -1,4 +1,10 @@
 RewriteEngine on
 RewriteRule ^youtube youtube.php
-RewriteRule ^twitch twitch.php
+RewriteRule ^twitch$ twitch.php
+RewriteRule ^twitch/$ twitch.php [L]
+RewriteRule ^twitch/([^/]+)$ twitch.php?channel=$1 [L]
+RewriteRule ^twitch/([^/]+)/([0-9]+)$ twitch.php?channel=$1&h=$2 [L]
+RewriteRule ^twitch/([^/]+)/(nochat|left|right)$ twitch.php?channel=$1&chat=$2 [L]
+RewriteRule ^twitch/([^/]+)/([0-9]+)/(nochat|left|right)$ twitch.php?channel=$1&h=$2&chat=$3 [L]
+RewriteRule ^twitch/([^/]+)/(nochat|left|right)/([0-9]+)$ twitch.php?channel=$1&h=$3&chat=$2 [L]
 RewriteRule ^changelog changelog.php
