@@ -2,9 +2,11 @@
 
 # Popout-Maker
 
-> Utility to generate custom Popout Windows with any browser
+![Version](https://img.shields.io/badge/stable-1.1.1-green.svg)
+[![Dev](https://img.shields.io/badge/unstable-v1.2--dev-orange.svg)](https://github.com/Mitsunee/Popout-Maker/tree/v1.2-dev)
+[![Link](https://img.shields.io/badge/http://-popoutmaker.mitsunee.com-555555.svg?colorA=55DD88)](http://popoutmaker.mitsunee.com)
 
-Popout-Maker is a small utility I made to have an easy way to open a page inside of a popup window.
+Popout-Maker is a small utility made to have an easy way to open a page, YouTube video, YouTube or Twitch Livestream inside of a popup window.
 
 ## Contents
 
@@ -22,10 +24,10 @@ Popup windows are smaller browser windows that are intentionally missing some fe
 
 ### Example
 
-> This is a standard Google Chrome browser window showing google.de. Notice how it shows the list of tabs and icons in and around the adress bar. Usually there'd also be a row of bookmarks below that.
+This is a standard Google Chrome browser window showing google.de. Notice how it shows the list of tabs and icons in and around the adress bar. Usually there'd also be a row of bookmarks below that.
 ![Standard Browser Window Screenshot](http://popoutmaker.mitsunee.com/assets/gitimg1.png)
 
-> Here's the popup window version of google.de in the very same browser. The tab row and icons around the adress bar are gone. Some browsers will even go as far as hiding the adress bar as well. Of course the bookmarks are also hidden (this is the case in any browser).
+Here's the popup window version of google.de in the very same browser. The tab row and icons around the adress bar are gone. Some browsers will even go as far as hiding the adress bar as well. Of course the bookmarks are also hidden (this is the case in any browser).
 ![Popup Browser Window Screenshot](http://popoutmaker.mitsunee.com/assets/gitimg2.png)
 
 <a name="youtube-popout"></a>
@@ -33,20 +35,22 @@ Popup windows are smaller browser windows that are intentionally missing some fe
 
 There is also dedicated pages for YouTube and Twitch popouts. The YouTube-version automatically converts video page and or playlist links to embed links, so only the actual video is visible in the popout.  
 ![YouTube Popout Screenshot](http://popoutmaker.mitsunee.com/assets/gitimg3.png)
-> Only the actual video is in the popout.
+Only the actual video is in the popout.
 
 <a name="twitch-popout"></a>
 ## Twitch Popouts
 
 The Twitch-version instead takes only the channel name and opens a similar popout that optionally also includes the chat:  
 ![Twitch Popout Screenshot](http://popoutmaker.mitsunee.com/assets/gitimg4.png)
-> The chat can be seen on the right side next to the stream. Names were censored for this screenshot.
+The chat can be seen on the right side next to the stream. Names were censored for this screenshot.
 
 <a name="status"></a>
 ## Current status:
 
-This version (1.1) is a recent release, it brought the Twitch-version and better styling.  
+This version (1.1.1) is a recent release, it brought the Twitch-version and better styling.  
 Should any problems arise that didn't show up in testing, please open an Issue on Github.
+
+Version 1.2 will be the *Preset Update* and is currently in development in the v1.2-dev branch.
 
 <a name="goals"></a>
 ## Current goals:

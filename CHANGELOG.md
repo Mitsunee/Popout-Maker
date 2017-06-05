@@ -32,3 +32,6 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 - Update 1.1.1
 	- *Internal*: Removed slashes in all `require`s. They weren't finding their files, because Popout-Maker isn't in the root directory on the live server.
 	- *Internal*: Images in README.md and CHANGELOG.md are now hosted on the live server.
+	- *Fixed*: The Github icon was clipping out of view in Firefox
+	- *Fixed*: A few things weren't valid HTML
+	- *Github*: Added a few badges and removed the quote marks in `README.md`
