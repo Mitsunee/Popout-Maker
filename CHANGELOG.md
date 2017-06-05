@@ -14,7 +14,13 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 
 > This update brought Presets with a basic link based API
 
-- nothing yet c:
+- Internal and global stuff
+	- *Internal*: Added a variable that can be set to prevent search engine indexing. This is used wherever a link-based API was used.
+- Twitch Preset API
+	- This API always starts with a channel name. It **cannot** be used without it. The channel name may be followed by a desired window height or chatside choice. The order of these two optional elements doesn't matter. The window width is calculated automatically to match a 16:9 aspectratio.  
+	*Examples*:  
+	`/twitch/mitsunee_/540` = the channel `mitsunee_` in a window with a 540px height.  
+	`/twitch/mitsunee_/nochat/1080` = the channel `mitsunee_` in a window with a 1080px height and no chat.
 
 <a name="#twitch-update"></a>
 ## Version 1.1 - Twitch Update
