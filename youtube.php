@@ -87,7 +87,7 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 	<div id="advanced_options_open" style="display:none;">
 		<input type="button" class="shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
 		<p>
-			<input type="checkbox" id="autoplayoption" checked="checked"><label for=autoplayoption">Enable Autoplay</label><br>
+			<input type="checkbox" id="autoplayoption" checked="checked"><label for="autoplayoption">Enable Autoplay</label><br>
 			<input type="checkbox" id="annotationsoption" checked="checked"><label for="annotationsoption">Enable Annotations</label><br>
 			<input type="checkbox" id="loopoption"><label for="loopoption">Enable Looping </label><span class="note">*<br>
 			Loops single video or the playlist. When looping a single video, youtube creates a temporary playlist with the same video two times.</span>
