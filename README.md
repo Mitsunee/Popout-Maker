@@ -63,5 +63,5 @@ Version 1.2 will be the *Preset Update* and is currently in development in the v
 <a name="changelog"></a>
 ## Changelog
 
-- [Changelog](https://github.com/Mitsunee/Popout-Maker/blob/master/CHANGELOG.md)
+- [Changelog](CHANGELOG.md)
 - The old beta-version changelog can be found [here](http://popoutmaker.mitsunee.com/changelog)

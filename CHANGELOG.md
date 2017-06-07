@@ -20,10 +20,10 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 	- The Preset API for standard links can be called by using `/link/` and appending **at least** a valid website-URL using either `http://` or `https://`
 	- Width and Height are specified by adding `{width}/{height}/` after `/link`. You have to set either both or neither.
 	- Scrollbars can be disabled by adding `noscroll/` before the URL  
-	*Examples*:
-	`/link/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no special settings
-	`/link/640/400/http://www.mitsunee.com` = a 640x400px sized popout with `www.mitsunee.com` and scrollbars
-	`/link/noscroll/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no scrollbars
+	*Examples*:  
+	`/link/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no special settings  
+	`/link/640/400/http://www.mitsunee.com` = a 640x400px sized popout with `www.mitsunee.com` and scrollbars  
+	`/link/noscroll/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no scrollbars  
 	`/link/640/400/noscroll/http://www.mitsunee.com` = a 640x400px sized popout with `www.mitsunee.com` and no scrollbars
 - YouTube Link Preset API
 - Twitch Preset API
