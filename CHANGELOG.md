@@ -27,6 +27,17 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 	`/link/noscroll/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no scrollbars  
 	`/link/640/400/noscroll/http://www.mitsunee.com` = a 640x400px sized popout with `www.mitsunee.com` and no scrollbars
 - YouTube Link Preset API
+	- This API works very similar to the Website Link Preset API. Again, **at least** the link is required and resolution can be set like above. The new thing is the *advanced options* parameter (which also includes the playlist option).
+	- The advanced options parameter goes before the URL. You can put the following letters in this order:
+		- ``A`` to disable Autoplay
+		- ``i`` to disable Annotations (i because it's called ``iv_load_policy`` in the embed URL)
+		- ``P`` to enable playlists. Note that if the scripts finds no video-ID, but does find a playlist-ID, it will automatically enable playlists even when this letter isn't in the parameter!
+		- ``L`` to enable Looping.  
+	*Examples*:  
+	`/youtube/http://www.youtube.com/watch?v=videovideo` = a popout with a video and default settings  
+	`/youtube/730/420/http://youtube.com/watch?v=videovideo` = a 730x420px sized video popout  
+	`/youtube/iL/http://gaming.youtube.com/watch?v=videovideo` = a video popout with annotations disabled and looping on  
+	`/youtube/730/420/i/http://youtube.com/playlist?list=playlistplaylist` = a 730x420px sized video popout with a playlist and annotations disabled. The playlist option is turned on by default, because no video-ID was given.
 - Twitch Preset API
 	- This API always starts with a channel name. It **cannot** be used without it. The channel name may be followed by a desired window height or chatside choice. The order of these two optional elements doesn't matter. The window width is calculated automatically to match a 16:9 aspectratio.  
 	*Examples*:  
