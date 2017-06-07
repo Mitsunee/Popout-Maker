@@ -18,6 +18,7 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 	- *Internal*: Added a variable that can be set to prevent search engine indexing. This is used wherever a link-based API was used.
 - Website Link Preset API
 	- The Preset API for standard links can be called by using `/link/` and appending **at least** a valid website-URL using either `http://` or `https://`
+	- URLs can't use double-quotation-marks `"` using the API, for security reasons.
 	- Width and Height are specified by adding `{width}/{height}/` after `/link`. You have to set either both or neither.
 	- Scrollbars can be disabled by adding `noscroll/` before the URL  
 	*Examples*:  

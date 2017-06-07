@@ -83,15 +83,7 @@ nav > a::before{
 	top:-3px;
 	left:-8px;
 	border-right: 1px solid #777;
-}/*
-nav img{
-	margin-right:3px;
-	position:relative;
-	top:1px;
-	float:left;
-	width:16px;
-	height:16px;
-}*/
+}
 nav > a[href='/']::before {
 	background-image:url('/assets/icon16.png'),linear-gradient(to bottom,#bbb,#888);
 	background-repeat:no-repeat,repeat;

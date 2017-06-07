@@ -52,11 +52,12 @@ Version 1.2 will be the *Preset Update* and is currently in development in the v
 <a name="goals"></a>
 ## Current goals:
 
-- [ ] Using PHP to allow presets via GET variables
-	- [ ] Index
-	- [ ] YouTube
+- [X] Using PHP to allow presets via GET variables
+	- [x] Index
+	- [X] YouTube
 	- [x] Twitch
 - [ ] Adding buttons to copy or bookmark a preset-link
+- [ ] Error Pages
 - [ ] A small wiki showcasing all preset variables and a general guide for all 3 versions
 - [ ] redo this file (again)
 
