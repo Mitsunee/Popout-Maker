@@ -36,10 +36,10 @@ function GeneratePopout() {
 	}
 	//include video-ID if existent
 	if(Boolean(inputVideoID)) popouturl += inputVideoID;
-	//at least try to get fullscreen option :/
-	popouturl += "?fs=1";
+	//enable fullscreen, disable autoplaying "related" videos
+	popouturl += "?fs=1&rel=0";
 	//include playlist
-	if(doPlaylist) popouturl += "&list=" + inputPlaylistID;
+	if(doPlaylist) popouturl += "&listType=playlist&list=" + inputPlaylistID;
 	//include other options: Autoplay, Annotations, Looping
 	if(doAnnotations) {popouturl += "&iv_load_policy=1";}else{popouturl += "&iv_load_policy=3";}
 	if(doAutoplay) {popouturl += "&autoplay=1";}else{popouturl += "&autoplay=0";}

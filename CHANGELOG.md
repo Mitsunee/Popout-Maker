@@ -16,6 +16,16 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 
 - Internal and global stuff
 	- *Internal*: Added a variable that can be set to prevent search engine indexing. This is used wherever a link-based API was used.
+- Website Link Preset API
+	- The Preset API for standard links can be called by using `/link/` and appending **at least** a valid website-URL using either `http://` or `https://`
+	- Width and Height are specified by adding `{width}/{height}/` after `/link`. You have to set either both or neither.
+	- Scrollbars can be disabled by adding `noscroll/` before the URL  
+	*Examples*:
+	`/link/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no special settings
+	`/link/640/400/http://www.mitsunee.com` = a 640x400px sized popout with `www.mitsunee.com` and scrollbars
+	`/link/noscroll/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no scrollbars
+	`/link/640/400/noscroll/http://www.mitsunee.com` = a 640x400px sized popout with `www.mitsunee.com` and no scrollbars
+- YouTube Link Preset API
 - Twitch Preset API
 	- This API always starts with a channel name. It **cannot** be used without it. The channel name may be followed by a desired window height or chatside choice. The order of these two optional elements doesn't matter. The window width is calculated automatically to match a 16:9 aspectratio.  
 	*Examples*:  

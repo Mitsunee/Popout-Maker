@@ -1,10 +1,16 @@
 RewriteEngine on
-RewriteRule ^youtube youtube.php
-RewriteRule ^twitch$ twitch.php
-RewriteRule ^twitch/$ twitch.php [L]
+RewriteRule ^link/http(.*) index.php?link=http$1 [L]
+RewriteRule ^link/noscroll/http(.*) index.php?noscroll&link=http$1 [L]
+RewriteRule ^link/([0-9]+)/([0-9]+)/http(.*) index.php?popWidth=$1&popHeight=$2&link=http$3 [L]
+RewriteRule ^link/([0-9]+)/([0-9]+)/noscroll/http(.*) index.php?popWidth=$1&popHeight=$2&noscroll&link=http$3 [L]
+RewriteRule ^youtube/?$ youtube.php [L]
+
+
+
+RewriteRule ^twitch/?$ twitch.php [L]
 RewriteRule ^twitch/([^/]+)$ twitch.php?channel=$1 [L]
 RewriteRule ^twitch/([^/]+)/([0-9]+)$ twitch.php?channel=$1&h=$2 [L]
 RewriteRule ^twitch/([^/]+)/(nochat|left|right)$ twitch.php?channel=$1&chat=$2 [L]
 RewriteRule ^twitch/([^/]+)/([0-9]+)/(nochat|left|right)$ twitch.php?channel=$1&h=$2&chat=$3 [L]
 RewriteRule ^twitch/([^/]+)/(nochat|left|right)/([0-9]+)$ twitch.php?channel=$1&h=$3&chat=$2 [L]
-RewriteRule ^changelog changelog.php
+RewriteRule ^changelog/?$ changelog.php
