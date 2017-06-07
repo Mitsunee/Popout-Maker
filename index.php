@@ -63,7 +63,7 @@ if(isset($_GET['link'])) {
 				<td><input type="number" name="height" id="inputheight" min="100" value="<?php if(isset($_API_REQUEST)&&isset($_API_REQUEST['popHeight'])&&is_numeric($_API_REQUEST['popHeight'])&&$_API_REQUEST['popHeight']>=100) {echo $_API_REQUEST['popHeight'];}else{;echo 720;}?>" oninput="aspectratio(this,'inputwidth','keep169option',9);"></td>
 			</tr>
 		</table>
-		<p><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"<?php if(isset($_API_REQUEST)&&isset($_API_REQUEST['noscroll'])) echo " checked"; ?>><label for="scrollbarsoption">Disable Scrollbars </label><span class="note">Firefox & IE only</span></p>
+		<p><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"<?php if(isset($_API_REQUEST)&&isset($_API_REQUEST['noscroll'])) echo " checked"; ?>><label for="scrollbarsoption">Disable Scrollbars </label><span class="note">Firefox &amp; IE only</span></p>
 		<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
 	</div>
 	<p><input type="submit" value="Generate Popout"></p>
