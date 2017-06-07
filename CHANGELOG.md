@@ -20,8 +20,8 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 	- The Preset API for standard links can be called by using `/link/` and appending **at least** a valid website-URL using either `http://` or `https://`
 	- URLs can't use double-quotation-marks `"` using the API, for security reasons.
 	- Width and Height are specified by adding `{width}/{height}/` after `/link`. You have to set either both or neither.
-	- Scrollbars can be disabled by adding `noscroll/` before the URL  
-	*Examples*:  
+	- Scrollbars can be disabled by adding `noscroll/` before the URL
+	- *Examples*:  
 	`/link/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no special settings  
 	`/link/640/400/http://www.mitsunee.com` = a 640x400px sized popout with `www.mitsunee.com` and scrollbars  
 	`/link/noscroll/http://www.mitsunee.com` = a popout with `www.mitsunee.com` and no scrollbars  
@@ -32,15 +32,15 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 		- ``A`` to disable Autoplay
 		- ``i`` to disable Annotations (i because it's called ``iv_load_policy`` in the embed URL)
 		- ``P`` to enable playlists. Note that if the scripts finds no video-ID, but does find a playlist-ID, it will automatically enable playlists even when this letter isn't in the parameter!
-		- ``L`` to enable Looping.  
-	*Examples*:  
+		- ``L`` to enable Looping.
+	- *Examples*:  
 	`/youtube/http://www.youtube.com/watch?v=videovideo` = a popout with a video and default settings  
 	`/youtube/730/420/http://youtube.com/watch?v=videovideo` = a 730x420px sized video popout  
 	`/youtube/iL/http://gaming.youtube.com/watch?v=videovideo` = a video popout with annotations disabled and looping on  
 	`/youtube/730/420/i/http://youtube.com/playlist?list=playlistplaylist` = a 730x420px sized video popout with a playlist and annotations disabled. The playlist option is turned on by default, because no video-ID was given.
 - Twitch Preset API
-	- This API always starts with a channel name. It **cannot** be used without it. The channel name may be followed by a desired window height or chatside choice. The order of these two optional elements doesn't matter. The window width is calculated automatically to match a 16:9 aspectratio.  
-	*Examples*:  
+	- This API always starts with a channel name. It **cannot** be used without it. The channel name may be followed by a desired window height or chatside choice. The order of these two optional elements doesn't matter. The window width is calculated automatically to match a 16:9 aspectratio.
+	- *Examples*:  
 	`/twitch/mitsunee_/540` = the channel `mitsunee_` in a window with a 540px height.  
 	`/twitch/mitsunee_/nochat/1080` = the channel `mitsunee_` in a window with a 1080px height and no chat.
 
