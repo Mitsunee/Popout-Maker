@@ -189,20 +189,21 @@ input[type='button'],input[type='submit']{
 	font-weight:300;
 }
 /*submit button*/
-input[type='submit']{
+input[type='submit'],input[type='button'].like-submit{
+	margin-right:8px;
 	background:#BBB;
 	background-image:linear-gradient(to bottom,#AAA,#CCC);
 	border:1px solid #999;
 	border-radius:8px;
 	box-shadow:1px 1px 3px rgba(0,0,0,0.75);
 }
-input[type='submit']:hover{
+input[type='submit']:hover,input[type='button'].like-submit:hover{
 	border:1px solid #AAA;
 	background:#CCC;
 	background-image:linear-gradient(to bottom,#DDD,#CCC);
 	box-shadow:1px 1px 3px rgba(0,0,0,1);
 }
-input[type='submit']:active{
+input[type='submit']:active,input[type='button'].like-submit:active{
 	transform:translateY(2px);
 }
 /*text style buttons*/

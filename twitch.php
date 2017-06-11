@@ -60,7 +60,7 @@ $_API_REQUEST['chat']=3;
 if(isset($_GET['chat'])&&$_GET['chat']=="left") $_API_REQUEST['chat']=1;
 if(isset($_GET['chat'])&&$_GET['chat']=="nochat") $_API_REQUEST['chat']=2;
 ?>	<p>Enter channel name here:<br>
-		<input type="text" name="popouturl" value="<?php echo $_API_REQUEST['channel'];?>" id="popouturl" style="width:500px"></p>
+		<input type="text" name="popouturl" value="<?php echo $_API_REQUEST['channel'];?>" id="popouturl" style="width:500px" autofocus></p>
 	<table>
 		<tr>
 			<td>Window width:</td>

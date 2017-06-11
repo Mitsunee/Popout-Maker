@@ -48,7 +48,7 @@ if(isset($_GET['link'])) {
 		$_API_REQUEST['link'] = urldecode(substr($_SERVER['REQUEST_URI'],stripos($_SERVER['REQUEST_URI'],"/http")+1)); //replacing 'link' with the correct version taken from the REQUEST_URI
 }
 ?>	<p>Enter your url here:<br>
-		<input type="text" name="popouturl" value="<?php if(isset($_API_REQUEST['link'])) echo str_replace("\"","",$_API_REQUEST['link']);?>" placeholder="http://" id="popouturl" style="width:500px"></p>
+		<input type="text" name="popouturl" value="<?php if(isset($_API_REQUEST['link'])) echo str_replace("\"","",$_API_REQUEST['link']);?>" placeholder="http://" id="popouturl" style="width:500px" autofocus></p>
 	<div id="advanced_options_closed" style="display:<?php if(!isset($_API_REQUEST)) {echo "block";} else {echo "none";}?>;"><input type="button" class="shadow-on-hover expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
 	<div id="advanced_options_open" style="display:<?php if(isset($_API_REQUEST)) {echo "block";} else {echo "none";}?>;">
 		<input type="button" class="shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
@@ -66,6 +66,6 @@ if(isset($_GET['link'])) {
 		<p><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"<?php if(isset($_API_REQUEST)&&isset($_API_REQUEST['noscroll'])) echo " checked"; ?>><label for="scrollbarsoption">Disable Scrollbars </label><span class="note">Firefox &amp; IE only</span></p>
 		<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
 	</div>
-	<p><input type="submit" value="Generate Popout"></p>
+	<p><input type="submit" value="Generate Popout"><!-- <input type="button" value="Generate Preset" class="like-submit" style="display:inline-block;" onclick="this.style.display='none';return false;">--></p>
 </form>
 <?php require 'assets/inc/footer.php';?>

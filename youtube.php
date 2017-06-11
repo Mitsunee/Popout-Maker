@@ -116,7 +116,7 @@ if(isset($_GET['link'])) { //check if there is any input
 	}
 }
 ?>	<p>Enter your youtube url here:<br>
-	<input type="url" name="popouturl" value="<?php if(isset($_API_REQUEST['link'])) echo $_API_REQUEST['link'];?>" placeholder="http://www.youtube.com/watch?v=" id="popouturl"><br>
+	<input type="url" name="popouturl" value="<?php if(isset($_API_REQUEST['link'])) echo $_API_REQUEST['link'];?>" placeholder="http://www.youtube.com/watch?v=" id="popouturl" autofocus><br>
 	<input type="checkbox" id="playlisttrigger" style="margin-top:8px;"<?php if(isset($_API_REQUEST)&&isset($_API_REQUEST['playlist'])) echo " checked"; ?>><label for="playlisttrigger">Include Playlist</label></p>
 	<div id="advanced_options_closed" style="display:<?php if($advOptions==false) {echo "block";} else {echo "none";}?>;"><input type="button" class="shadow-on-hover expand" value="More Options" onClick="OpenTextboxToggle('advanced_options_closed','advanced_options_open');"></div>
 	<div id="advanced_options_open" style="display:<?php if($advOptions==true) {echo "block";} else {echo "none";}?>;">
@@ -130,12 +130,12 @@ if(isset($_GET['link'])) { //check if there is any input
 		<table>
 			<tr>
 				<td>Window width:</td>
-				<td><input type="number" name="width" id="inputwidth" min="100" value="<?php if(isset($_API_REQUEST['width'])) {echo $_API_REQUEST['width'];} else {echo 1280;} ?>" onChange="aspectratio(this,'inputheight','keep169option',16);"></td>
+				<td><input type="number" name="width" id="inputwidth" min="100" value="<?php if(isset($_API_REQUEST['width'])) {echo $_API_REQUEST['width'];} else {echo 1280;} ?>" oninput="aspectratio(this,'inputheight','keep169option',16);"></td>
 				<td rowspan="2"><input type="checkbox" id="keep169option" name="keep169option"<?php if(!isset($_API_REQUEST['width'])) echo " checked"; ?>><label for="keep169option">Keep 16:9 aspect ratio</label></td>
 			</tr>
 			<tr>
 				<td>Window height:</td>
-				<td><input type="number" name="height" id="inputheight" min="100" value="<?php if(isset($_API_REQUEST['height'])) {echo $_API_REQUEST['height'];} else {echo 720;} ?>" onChange="aspectratio(this,'inputwidth','keep169option',9);"></td>
+				<td><input type="number" name="height" id="inputheight" min="100" value="<?php if(isset($_API_REQUEST['height'])) {echo $_API_REQUEST['height'];} else {echo 720;} ?>" oninput="aspectratio(this,'inputwidth','keep169option',9);"></td>
 			</tr>
 		</table>
 	</div>
