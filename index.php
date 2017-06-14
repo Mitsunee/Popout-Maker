@@ -30,6 +30,9 @@ function GeneratePopout() {
 	popoutWindow = window.open(input, "pmpopout", popoutWindowpreferences);
 	popoutWindow.focus();
 }
+function presetLoop() {
+	
+}
 </script>
 </head>
 <body>
@@ -67,5 +70,7 @@ if(isset($_GET['link'])) {
 		<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
 	</div>
 	<p><input type="submit" value="Generate Popout"><!-- <input type="button" value="Generate Preset" class="like-submit" style="display:inline-block;" onclick="this.style.display='none';return false;">--></p>
+	<div id="presetOutput"><h3>Preset</h3><hr>
+	<input type="url" name="presetOutputField" value="http://popoutmaker.mitsunee.com/" style="width:500px;" readonly><input type="button" value="Copy to clipboard"></div>
 </form>
 <?php require 'assets/inc/footer.php';?>

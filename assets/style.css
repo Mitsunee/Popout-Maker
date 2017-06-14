@@ -100,7 +100,7 @@ nav > a[href='/twitch']::before {
 	background-position:center center,0px 0px;
 }
 hr {
-	border-top:0px;
+	border:0px;
 	border-bottom:1px solid #666;
 	margin-bottom:0px;
 	padding-bottom:0px;
@@ -150,6 +150,32 @@ a{
 	float:left;
 }
 
+#presetOutput{
+	margin:20px;
+	padding:10px 0px;
+	width:750px;
+	border:1px solid #444;
+	background:#FFF;
+}
+#presetOutput>h3{margin:8px 15px 3px 15px;}
+#presetOutput>hr{margin:0px 0px 10px 0px;}
+#presetOutput>input{box-shadow:1px 1px 3px rgba(0,0,0,0.75);}
+#presetOutput>input[type='url']{
+	border:1px solid #666;
+	height:18px;
+	transform:translateY(-1px);
+	margin-left:10px;
+	padding-left:4px;
+}
+#presetOutput>input[type='button']{
+	background:#BBB;
+	background-image:linear-gradient(to bottom,#AAA,#CCC);
+	border:1px solid #999;
+}
+#presetOutput>input:first-of-type{border-top-left-radius:8px;border-bottom-left-radius:8px;}
+#presetOutput>input:last-of-type{border-top-right-radius:8px;border-bottom-right-radius:8px;}
+#presetOutput>input[type='button']:active{color:#666;}
+
 footer a{color:#C00;text-decoration:underline;}
 footer a.gitlink::before{
 	background-image:url('/assets/icon16git.png');
@@ -197,7 +223,7 @@ input[type='submit'],input[type='button'].like-submit{
 	border-radius:8px;
 	box-shadow:1px 1px 3px rgba(0,0,0,0.75);
 }
-input[type='submit']:hover,input[type='button'].like-submit:hover{
+input[type='submit']:hover,input[type='button'].like-submit:hover,#presetOutput>input[type='button']:hover{
 	border:1px solid #AAA;
 	background:#CCC;
 	background-image:linear-gradient(to bottom,#DDD,#CCC);
