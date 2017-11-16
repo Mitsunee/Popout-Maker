@@ -201,7 +201,7 @@ footer{
 	font-size:14px;
 	padding:2px;
 }
-
+#legacychat {margin-top:16px;}
 
 /* INPUTS */
 #inputwidth,#inputheight {width:45px;}

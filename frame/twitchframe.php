@@ -1,4 +1,9 @@
 <?php
+if(empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] !== "on") { //FORCE HTTPS (because twitch requires it now)
+	if(!isset($_GET["legacychat"]){//currently only forcing https if the new chat is used, because I can't test https locally right now. Sorry >_>
+    header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+    exit();}
+}
 $err400="<h1>ERROR 400 - BAD REQUEST</h1>";
 if(!isset($_GET['channel'])){http_response_code(400);die($err400);}
 if(!isset($_GET['chat'])){http_response_code(400);die($err400);}
@@ -36,5 +41,15 @@ iframe{border:0px;margin:0px;padding:0px;}
 </head>
 <body>
 <iframe src="https://player.twitch.tv/?channel=<?php echo $channel;?>" id="twitch-player"<?php if($chat) echo ' class="'.$chatoption.'"'; ?>></iframe>
-<?php if($chat) echo '<iframe src="https://www.twitch.tv/'.$channel.'/chat?popout=" id="twitch-chat" class="'.$chatoption.'"></iframe>';?>
+<?php
+// new:   https://www.twitch.tv/popout/mitsunee_/chat?popout=
+//legacy: https://www.twitch.tv/mitsunee_/chat?popout=
+if($chat) {
+	if(isset($_GET['legacychat'])) {
+		echo '<iframe src="https://www.twitch.tv/'.$channel.'/chat?popout=" id="twitch-chat" class="'.$chatoption.'"></iframe>';
+	} else {
+		echo '<iframe src="https://www.twitch.tv/popout/'.$channel.'/chat?popout=" id="twitch-chat" class="'.$chatoption.'"></iframe>';
+	}
+}
+?>
 </body></html>

@@ -30,10 +30,10 @@ function GeneratePopout() {
 	popoutWindow = window.open(input, "pmpopout", popoutWindowpreferences);
 	popoutWindow.focus();
 }
-function GeneratePreset() {
+//function GeneratePreset() { NOT AVAILABLE YET
 	//do stuff
-	$(document.getElementById('presetOutput')).show();
-}
+//	$(document.getElementById('presetOutput')).show();
+//}
 </script>
 </head>
 <body>
@@ -70,12 +70,12 @@ if(isset($_GET['link'])) {
 		<p><input type="checkbox" id="scrollbarsoption" name="scrollbarsoption"<?php if(isset($_API_REQUEST)&&isset($_API_REQUEST['noscroll'])) echo " checked"; ?>><label for="scrollbarsoption">Disable Scrollbars </label><span class="note">Firefox &amp; IE only</span></p>
 		<p class="note">Note that all things changed in here, will still be applied, even if you hide these options again.</p>
 	</div>
-	<p><input type="submit" value="Generate Popout"><input type="button" value="Generate Preset" class="like-submit" style="display:inline-block;" onclick="$(this).hide();GeneratePreset();return false;"></p>
+	<p><input type="submit" value="Generate Popout"><!--<input type="button" value="Generate Preset" class="like-submit" style="display:inline-block;" onclick="$(this).hide();GeneratePreset();return false;">--></p><!--
 	<div id="presetOutput" style="display:none;">
 		<input type="button" value="X" onclick="$(this).parent().hide();return false;" class="like-submit" style="float:right;">
 		<h3>Preset</h3>
 		<hr>
 		<input type="url" name="presetOutputField" value="http://popoutmaker.mitsunee.com/" style="width:500px;" onmouseup="$(this).select();" readonly><input type="button" value="Copy to clipboard">
-	</div>
+	</div>-->
 </form>
 <?php require 'assets/inc/footer.php';?>
