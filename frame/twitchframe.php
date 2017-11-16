@@ -1,6 +1,6 @@
 <?php
 if(empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] !== "on") { //FORCE HTTPS (because twitch requires it now)
-	if(!isset($_GET["legacychat"]){//currently only forcing https if the new chat is used, because I can't test https locally right now. Sorry >_>
+	if(!isset($_GET["legacychat"])){//currently only forcing https if the new chat is used, because I can't test https locally right now. Sorry >_>
     header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
     exit();}
 }
