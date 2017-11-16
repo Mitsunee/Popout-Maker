@@ -17,7 +17,7 @@ function GeneratePopout() {
 	if(chatoption!="none") inputwidth = +inputwidth + 340;//add space for chat, if enabled
 	//piece together preferences
 	popoutWindowpreferences = "width=" + inputwidth + ",height=" + inputheight + ",status=no,scrollbars=no,resizable=yes,location=no,menubar=no";
-	windowLink = "https://www.mitsunee.com/popoutmakertwitch/twitchframe.php?channel="+input+"&chat="+chatoption;
+	windowLink = "/frame/twitchframe.php?channel="+input+"&chat="+chatoption;
 	if(document.getElementById('legacychatoption').checked && chatoption != "none") windowLink += "&legacychat";
 	popoutWindow = window.open(windowLink, "pmpopout", popoutWindowpreferences);
 	popoutWindow.focus();
@@ -85,7 +85,7 @@ if(isset($_GET['chat'])&&$_GET['chat']=="nochat") $_API_REQUEST['chat']=2;
 			<input type="radio" name="chatsidechoice" id="chatsideright" value="right" onChange="ToggleChat('radio-3');"<?php if($_API_REQUEST['chat']==3) echo " checked";?>><label for="chatsideright" class="is-radio"> Show chat on the right side</label>
 			<div style="clear:both;" class="radio-<?php echo $_API_REQUEST['chat'];?>" id="chatsidebg"><div class="radio-bg"></div></div>
 		</div>
-	<div id="legacychat"><input type="checkbox" name="legacychatoption" id="legacychatoption"><label for="legacychatoption"> Use Twitch Legacy chat <span class="note">(may break at any time)</span></label></div>
+	<div id="legacychat"><input type="checkbox" name="legacychatoption" id="legacychatoption"><label for="legacychatoption"> Use Twitch Legacy chat <span class="note">(may break at any time)</span></label><br><span class="note">New chat is currently not possible.</span></div>
 	<p><input type="submit" value="Generate Popout"></p>
 </form>
 <?php require 'assets/inc/footer.php';?>
