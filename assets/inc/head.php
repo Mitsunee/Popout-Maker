@@ -11,6 +11,7 @@ if($self=="twitch") $metaDescription .= "twitchTV livestream";
 $metaDescription .= " inside of a popup window.";
 echo $metaDescription;
 ?>">
+<?php if(isset($robotNoIndex)) echo "<meta name=\"robots\" content=\"NOINDEX\">".PHP_EOL;?>
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Popout-Maker<?php if($self=="twitch") echo" Twitch";if($self=="youtube") echo " YouTube"; ?>">
 <meta name="twitter:description" content="<?php echo $metaDescription;?>">

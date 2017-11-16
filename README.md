@@ -2,11 +2,12 @@
 
 # Popout-Maker
 
-![Version](https://img.shields.io/badge/stable-1.1.1-green.svg)
-[![Dev](https://img.shields.io/badge/unstable-v1.2--dev-orange.svg)](https://github.com/Mitsunee/Popout-Maker/tree/v1.2-dev)
+![Version](https://img.shields.io/badge/stable-1.2-green.svg)
+[![Dev](https://img.shields.io/badge/unstable-v1.2.1--dev-orange.svg)](https://github.com/Mitsunee/Popout-Maker/tree/v1.2-dev)
 [![Link](https://img.shields.io/badge/http://-popoutmaker.mitsunee.com-555555.svg?colorA=55DD88)](http://popoutmaker.mitsunee.com)
 
-Popout-Maker is a small utility made to have an easy way to open a page, YouTube video, YouTube or Twitch Livestream inside of a popup window.
+Popout-Maker is a small utility made to have an easy way to open a page, YouTube video, YouTube or Twitch Livestream inside of a popup window.  
+*Part 1 of the 1.2 update is live. **IMPORTANT**: Twitch popouts with legacy chat currently do not force https. Use this option, if https is making trouble, thx.*
 
 ## Contents
 
@@ -47,22 +48,22 @@ The chat can be seen on the right side next to the stream. Names were censored f
 <a name="status"></a>
 ## Current status:
 
-This version (1.1.1) is a recent release, it brought the Twitch-version and better styling.  
-Should any problems arise that didn't show up in testing, please open an Issue on Github.
-
 Version 1.2 will be the *Preset Update* and is currently in development in the v1.2-dev branch.
 
 <a name="goals"></a>
 ## Current goals:
 
-next version:  
-- Using PHP to allow presets via GET variables
-- Adding buttons to copy or bookmark a preset-link
-- A small wiki showcasing all preset variables and a general guide for all 3 versions
-- redo this file (again)
+- [X] Using PHP to allow presets via GET variables
+	- [x] Index
+	- [X] YouTube
+	- [x] Twitch
+- [ ] Adding buttons to copy or bookmark a preset-link
+- [ ] Error Pages
+- [ ] A small wiki showcasing all preset variables and a general guide for all 3 versions
+- [ ] redo this file (again)
 
 <a name="changelog"></a>
 ## Changelog
 
-- [Changelog](https://github.com/Mitsunee/Popout-Maker/blob/master/CHANGELOG.md)
+- [Changelog](CHANGELOG.md)
 - The old beta-version changelog can be found [here](http://popoutmaker.mitsunee.com/changelog)

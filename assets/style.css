@@ -83,15 +83,7 @@ nav > a::before{
 	top:-3px;
 	left:-8px;
 	border-right: 1px solid #777;
-}/*
-nav img{
-	margin-right:3px;
-	position:relative;
-	top:1px;
-	float:left;
-	width:16px;
-	height:16px;
-}*/
+}
 nav > a[href='/']::before {
 	background-image:url('/assets/icon16.png'),linear-gradient(to bottom,#bbb,#888);
 	background-repeat:no-repeat,repeat;
@@ -108,7 +100,7 @@ nav > a[href='/twitch']::before {
 	background-position:center center,0px 0px;
 }
 hr {
-	border-top:0px;
+	border:0px;
 	border-bottom:1px solid #666;
 	margin-bottom:0px;
 	padding-bottom:0px;
@@ -158,6 +150,32 @@ a{
 	float:left;
 }
 
+#presetOutput{
+	margin:20px;
+	padding:10px 0px;
+	width:750px;
+	border:1px solid #444;
+	background:#FFF;
+}
+#presetOutput>h3{margin:8px 15px 3px 15px;}
+#presetOutput>hr{margin:0px 0px 10px 0px;}
+#presetOutput>input{box-shadow:1px 1px 3px rgba(0,0,0,0.75);}
+#presetOutput>input[type='url']{
+	border:1px solid #666;
+	height:18px;
+	transform:translateY(-1px);
+	margin-left:10px;
+	padding-left:4px;
+}
+#presetOutput>input[type='button']{
+	background:#BBB;
+	background-image:linear-gradient(to bottom,#AAA,#CCC);
+	border:1px solid #999;
+}
+#presetOutput>input:first-of-type{border-top-left-radius:8px;border-bottom-left-radius:8px;}
+#presetOutput>input:last-of-type{border-top-right-radius:8px;border-bottom-right-radius:8px;}
+#presetOutput>input[type='button']:active{color:#666;}
+
 footer a{color:#C00;text-decoration:underline;}
 footer a.gitlink::before{
 	background-image:url('/assets/icon16git.png');
@@ -183,7 +201,7 @@ footer{
 	font-size:14px;
 	padding:2px;
 }
-
+#legacychat {margin-top:16px;}
 
 /* INPUTS */
 #inputwidth,#inputheight {width:45px;}
@@ -197,20 +215,21 @@ input[type='button'],input[type='submit']{
 	font-weight:300;
 }
 /*submit button*/
-input[type='submit']{
+input[type='submit'],input[type='button'].like-submit{
+	margin-right:8px;
 	background:#BBB;
 	background-image:linear-gradient(to bottom,#AAA,#CCC);
 	border:1px solid #999;
 	border-radius:8px;
 	box-shadow:1px 1px 3px rgba(0,0,0,0.75);
 }
-input[type='submit']:hover{
+input[type='submit']:hover,input[type='button'].like-submit:hover,#presetOutput>input[type='button']:hover{
 	border:1px solid #AAA;
 	background:#CCC;
 	background-image:linear-gradient(to bottom,#DDD,#CCC);
 	box-shadow:1px 1px 3px rgba(0,0,0,1);
 }
-input[type='submit']:active{
+input[type='submit']:active,input[type='button'].like-submit:active{
 	transform:translateY(2px);
 }
 /*text style buttons*/
