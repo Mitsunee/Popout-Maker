@@ -16,6 +16,7 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 
 - Internal and global stuff
 	- *Internal*: Added a variable that can be set to prevent search engine indexing. This is used wherever a link-based API was used.
+	- The Twitch popout should now be forcing https. **This will probably break, so legacy chat will not do this.**
 - Website Link Preset API
 	- The Preset API for standard links can be called by using `/link/` and appending **at least** a valid website-URL using either `http://` or `https://`
 	- URLs can't use double-quotation-marks `"` using the API, for security reasons.

@@ -2,11 +2,12 @@
 
 # Popout-Maker
 
-![Version](https://img.shields.io/badge/stable-1.1.1-green.svg)
-[![Dev](https://img.shields.io/badge/unstable-v1.2--dev-orange.svg)](https://github.com/Mitsunee/Popout-Maker/tree/v1.2-dev)
+![Version](https://img.shields.io/badge/stable-1.2-green.svg)
+[![Dev](https://img.shields.io/badge/unstable-v1.2.1--dev-orange.svg)](https://github.com/Mitsunee/Popout-Maker/tree/v1.2-dev)
 [![Link](https://img.shields.io/badge/http://-popoutmaker.mitsunee.com-555555.svg?colorA=55DD88)](http://popoutmaker.mitsunee.com)
 
-Popout-Maker is a small utility made to have an easy way to open a page, YouTube video, YouTube or Twitch Livestream inside of a popup window.
+Popout-Maker is a small utility made to have an easy way to open a page, YouTube video, YouTube or Twitch Livestream inside of a popup window.  
+*Part 1 of the 1.2 update is live. **IMPORTANT**: Twitch popouts with legacy chat currently do not force https. Use this option, if https is making trouble, thx.*
 
 ## Contents
 
