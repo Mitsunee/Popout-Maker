@@ -1,9 +1,4 @@
 <?php
-if(empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] !== "on") { //FORCE HTTPS (because twitch requires it now)
-	if(!isset($_GET["legacychat"])){//currently only forcing https if the new chat is used, because I can't test https locally right now. Sorry >_>
-    header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
-    exit();}
-}
 $err400="<h1>ERROR 400 - BAD REQUEST</h1>";
 if(!isset($_GET['channel'])){http_response_code(400);die($err400);}
 if(!isset($_GET['chat'])){http_response_code(400);die($err400);}
