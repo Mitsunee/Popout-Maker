@@ -17,7 +17,7 @@ function GeneratePopout() {
 	if(chatoption!="none") inputwidth = +inputwidth + 340;//add space for chat, if enabled
 	//piece together preferences
 	popoutWindowpreferences = "width=" + inputwidth + ",height=" + inputheight + ",status=no,scrollbars=no,resizable=yes,location=no,menubar=no";
-	windowLink = "https://www.mitsunee.com/frame/twitchframe.php?channel="+input+"&chat="+chatoption;
+	windowLink = "https://www.mitsunee.com/popoutmakertwitch/twitchframe.php?channel="+input+"&chat="+chatoption;
 	if(document.getElementById('legacychatoption').checked && chatoption != "none") windowLink += "&legacychat";
 	popoutWindow = window.open(windowLink, "pmpopout", popoutWindowpreferences);
 	popoutWindow.focus();
