@@ -43,7 +43,7 @@ if($chat) {
 	if(isset($_GET['legacychat'])) {
 		echo '<iframe src="https://www.twitch.tv/'.$channel.'/chat?popout=" id="twitch-chat" class="'.$chatoption.'"></iframe>';
 	} else {
-		echo '<iframe src="https://www.twitch.tv/popout/'.$channel.'/chat?popout=" id="twitch-chat" class="'.$chatoption.'"></iframe>';
+		echo '<iframe src="https://www.twitch.tv/embed/'.$channel.'/chat/" id="twitch-chat" class="'.$chatoption.'"></iframe>';
 	}
 }
 ?>
