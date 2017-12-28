@@ -17,10 +17,10 @@ if($chatoption=="none") {$chat=false;}else{$chat=true;}
 <style>
 body,html{margin:0px;padding:0px;height:100%;width:100%;overflow:hidden;}
 iframe{border:0px;margin:0px;padding:0px;}
-#twitch-player{
+#twitch-player,#twitch-player > iframe{
 	box-sizing:border-box;
-	width:100%;
-	height:100%;
+	width:100% !important;
+	height:100% !important;
 }
 #twitch-chat{
 	height:100%;
@@ -33,9 +33,16 @@ iframe{border:0px;margin:0px;padding:0px;}
 #twitch-player.right{padding-right:340px;}
 #twitch-chat.right{right:0px;}
 </style>
+<script src= "http://player.twitch.tv/js/embed/v1.js"></script>
 </head>
 <body>
-<iframe src="https://player.twitch.tv/?channel=<?php echo $channel;?>" id="twitch-player"<?php if($chat) echo ' class="'.$chatoption.'"'; ?>></iframe>
+<div id="twitch-player"<?php if($chat) echo ' class="'.$chatoption.'"'; ?>></div>
+<script type="text/javascript">
+	var options = {
+ 		channel: "<?php echo $channel;?>"
+	};
+	var player = new Twitch.Player("twitch-player", options);
+</script>
 <?php
 // new:   https://www.twitch.tv/popout/mitsunee_/chat?popout=
 //legacy: https://www.twitch.tv/mitsunee_/chat?popout=
