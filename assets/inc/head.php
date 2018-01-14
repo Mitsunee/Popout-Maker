@@ -15,10 +15,10 @@ echo $metaDescription;
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Popout-Maker<?php if($self=="twitch") echo" Twitch";if($self=="youtube") echo " YouTube"; ?>">
 <meta name="twitter:description" content="<?php echo $metaDescription;?>">
-<meta name="twitter:image" content="/assets/icon64.gif">
+<meta name="twitter:image" content="/assets/icon64.png">
 <meta name="twitter:creator" content="@Mitsunee">
 <meta property="og:title" content="Popout-Maker<?php if($self=="twitch") echo" Twitch";if($self=="youtube") echo " YouTube"; ?>">
-<meta property="og:image" content="/assets/icon64.gif">
+<meta property="og:image" content="/assets/icon64.png">
 <meta property="og:description" content="<?php echo $metaDescription;?>">
 <link rel="stylesheet" href="/assets/style.css" type="text/css">
 <link rel="icon" href="/favicon.ico">
