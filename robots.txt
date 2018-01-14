@@ -1,9 +1,9 @@
+User-agent: Twitterbot
+Allow: /assets/icon64.png
+
 User-agent: *
 Disallow: /assets
-Disallow: /README.md
-Disallow: /CHANGELOG.md
 Disallow: /changelog
 Disallow: /favicon.ico
 Disallow: /frame
-Allow: /assets/icon64.gif
-Allow: /assets/icon16.png
+Allow: /assets/icon64.png
