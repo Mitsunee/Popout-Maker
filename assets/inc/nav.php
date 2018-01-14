@@ -1,6 +1,12 @@
-<nav><?php
-if($self!="index") echo '<a href="/" class="shadow-on-hover">Popout-Maker</a>';
-if($self!="youtube") echo '<a href="/youtube" class="shadow-on-hover">YouTube</a>';
-if($self!="twitch") echo '<a href="/twitch" class="shadow-on-hover">Twitch</a>';
-?>
+<nav>
+<span>Popout-Maker</span>
+<a href="/" class="shadow-on-hover nav-self<?php if($self=="index") echo " force-open";?>">Web</a>
+<a href="/youtube" class="shadow-on-hover nav-youtube<?php if($self=="youtube") echo " force-open";?>">YouTube</a>
+<a href="/twitch" class="shadow-on-hover nav-twitch<?php if($self=="twitch") echo " force-open";?>">Twitch</a>
+<span><br>Popout-Maker on Github</span>
+<a href="https://github.com/Mitsunee/Popout-Maker/wiki/Link-Based-APIs" class="shadow-on-hover nav-set">Presets Guide</a>
+<a href="https://github.com/Mitsunee/Popout-Maker" class="shadow-on-hover nav-git">Repository</a>
+<a href="https://github.com/Mitsunee/Popout-Maker/blob/master/CHANGELOG.md" class="shadow-on-hover nav-changelog">Changelog</a>
+<span><br>Contact</span>
+<a href="http://twitter.com/Mitsunee" class="shadow-on-hover nav-tweet">Twitter</a>
 </nav>

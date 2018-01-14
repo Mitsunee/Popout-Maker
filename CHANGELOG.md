@@ -6,8 +6,20 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 
 ## Contents
 
+- [Version 1.2.1 - Redesign](#redesign-update)
 - [Version 1.2 - Preset Update](#preset-update)
 - [Version 1.1 - Twitch Update](#twitch-update)
+
+<a name="#redesign-update"></a>
+## Version 1.2.1 - Redesign
+
+> This update changed the design and fixed some minor issues
+- Internal and global stuff
+	- Design updated
+	- Added links to Wiki, Repository main page, this here changelog and my Twitter
+- Bugs fixed:
+	- The Link Preset API would break the `http://` or `https://` in links, by removing all but the first `/`
+	- The YouTube page didn't have the defaults anymore, due to a mistake made when implementing presets
 
 <a name="#preset-update"></a>
 ## Version 1.2 - Preset Update

@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="author" content="Michelle 'Mitsunee'">
+<meta name="author" content="Mitsunee">
 <meta name="description" content="<?php
 $metaDescription = "Popout-Maker";
 if($self=="twitch") $metaDescription .= " Twitch";

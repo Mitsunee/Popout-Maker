@@ -19,7 +19,7 @@ function GeneratePopout() {
 	inputwidth = document.getElementById('inputwidth').value;
 	inputheight = document.getElementById('inputheight').value;
 	scrollbarsoption = document.getElementById('scrollbarsoption');
-	if (httpcheck != "http://") if (httpscheck != "https://") input = "http://" + input;
+	if (httpcheck != "http://" && httpscheck != "https://") input = "http://" + input;
 	if (scrollbarsoption.checked == true) {
 		scrollbars = "no";
 	}else{
@@ -37,9 +37,8 @@ function GeneratePopout() {
 </script>
 </head>
 <body>
-<header><img src="/assets/icon64.gif" alt="Icon"><span>Popout-Maker</span></header>
+<header>Popout-Maker</header>
 <?php require 'assets/inc/nav.php';?>
-<hr style="clear:both;">
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="linkemptyerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>You must enter a URL to open.</div></div>

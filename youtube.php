@@ -73,9 +73,8 @@ function _GET(needle,haystack) {//looks for variable needle in haystack (haystac
 </script>
 </head>
 <body>
-<header><img src="/assets/icon64yt.png" alt="Icon"><span>Popout-Maker </span><img src="/assets/logo32yt.png" alt="YouTube"></header>
+<header>Popout-Maker <span>for YouTube</span></header>
 <?php require 'assets/inc/nav.php';?>
-<hr style="clear:both;">
 <main>
 <noscript><div class="errorwrapper" id="noscripterror"><img src="/assets/warning.png" alt="!"><div>Javascript is disabled or not suppported by your browser</div></div></noscript>
 <div class="errorwrapper" id="apilinkerror" style="display:none;"><img src="/assets/warning.png" alt="!"><div>API request made, but couldn't find valid youtube video or playlist URL.</div></div>
@@ -122,8 +121,8 @@ if(isset($_GET['link'])) { //check if there is any input
 	<div id="advanced_options_open" style="display:<?php if($advOptions==true) {echo "block";} else {echo "none";}?>;">
 		<input type="button" class="shadow-on-hover collapse" value="Less Options" onClick="OpenTextboxToggle('advanced_options_open','advanced_options_closed');">
 		<p>
-			<input type="checkbox" id="autoplayoption"<?php if(isset($_API_REQUEST)&&!isset($_API_REQUEST['advOptions']['autoplay'])) echo " checked"; ?>><label for="autoplayoption">Enable Autoplay</label><br>
-			<input type="checkbox" id="annotationsoption"<?php if(isset($_API_REQUEST)&&!isset($_API_REQUEST['advOptions']['annotations'])) echo " checked"; ?>><label for="annotationsoption">Enable Annotations</label><br>
+			<input type="checkbox" id="autoplayoption"<?php if(isset($_API_REQUEST)&&!isset($_API_REQUEST['advOptions']['autoplay'])) echo " checked";if(!isset($_API_REQUEST)) echo " checked"; ?>><label for="autoplayoption">Enable Autoplay</label><br>
+			<input type="checkbox" id="annotationsoption"<?php if(isset($_API_REQUEST)&&!isset($_API_REQUEST['advOptions']['annotations'])) echo " checked";if(!isset($_API_REQUEST)) echo " checked"; ?>><label for="annotationsoption">Enable Annotations</label><br>
 			<input type="checkbox" id="loopoption"<?php if(isset($_API_REQUEST)&&isset($_API_REQUEST['advOptions']['looping'])) echo " checked"; ?>><label for="loopoption">Enable Looping </label><span class="note">*<br>
 			Loops single video or the playlist. When looping a single video, youtube creates a temporary playlist with the same video two times.</span>
 		</p>
