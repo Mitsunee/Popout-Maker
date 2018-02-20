@@ -5,5 +5,6 @@ if($self=="twitch") {
 	echo '.png" style="position:relative;top:6px;" alt="Now Live"> Now Live <span style="font-size:0.8em">(Stream announcing bot for Discord)</span></a></p>'.PHP_EOL;
 }
 ?></main>
+<label for="darkmode" id="darkmode-selector" class="shadow-on-hover">Enable Darkmode<br><input type="checkbox" id="darkmode" onchange="ToggleDarkmode();"></label>
 <footer>Made by <a href="http://www.mitsunee.com">Mitsunee</a></footer>
 </body></html>

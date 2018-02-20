@@ -25,6 +25,7 @@ echo $metaDescription;
 <link rel="shortcut icon" href="/favicon.ico">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="/assets/aspectratio.js"></script>
+<script src="/assets/ToggleDarkmode.js"></script>
 <?php
 if($self=="twitch") echo "<script src=\"/assets/radioValue.js\"></script>\n";
 if($self=="index"||$self=="youtube") echo "<script src=\"/assets/OpenTextbox.js\"></script>\n"; ?>
