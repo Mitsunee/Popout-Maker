@@ -47,6 +47,7 @@ nav > a:link,nav > a:visited{
 nav > a.force-open{text-shadow:1px 1px 3px rgba(0,0,0,0.25);}
 nav > a.nav-self::before {background-image:url('/assets/icon64.png');}
 nav > a.nav-youtube::before {background-image:url('/assets/icon64yt.png');}
+nav > a.nav-ytg::before {background-image:url('/assets/icon64ytg.png');}
 nav > a.nav-twitch::before {background-image:url('/assets/icon64tw.png');}
 nav > a.nav-git::before {background-image:url('/assets/icon64git.png');}
 nav > a.nav-set::before {background-image:url('/assets/icon64set.png');}

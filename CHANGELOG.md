@@ -1,4 +1,4 @@
-<img src="http://popoutmaker.mitsunee.com/assets/icon64.gif" align="right">
+<img src="http://popoutmaker.mitsunee.com/assets/icon64.png" align="right">
 
 # Changelog
 
@@ -6,9 +6,18 @@ The full list of individual commits can be seen [here](https://github.com/Mitsun
 
 ## Contents
 
+- [Version 1.2.2 - YouTube Gaming](#ytg-update)
 - [Version 1.2.1 - Redesign](#redesign-update)
 - [Version 1.2 - Preset Update](#preset-update)
 - [Version 1.1 - Twitch Update](#twitch-update)
+
+<a name="#ytg-update"></a>
+## Version 1.2.2 - YouTube Gaming
+> This update added a page for YouTube Gaming livestreams, similar to what was already available for Twitch
+- Internal and global stuff
+	- Moved the js function `_GET()` to its own file
+	- Added YouTube Gaming support
+	- Updated YouTube Branding and optimized a bunch of PNG images
 
 <a name="#redesign-update"></a>
 ## Version 1.2.1 - Redesign

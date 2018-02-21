@@ -3,15 +3,25 @@ RewriteRule ^link/http(.*) index.php?link=http$1 [L]
 RewriteRule ^link/noscroll/http(.*) index.php?noscroll&link=http$1 [L]
 RewriteRule ^link/([0-9]+)/([0-9]+)/http(.*) index.php?popWidth=$1&popHeight=$2&link=http$3 [L]
 RewriteRule ^link/([0-9]+)/([0-9]+)/noscroll/http(.*) index.php?popWidth=$1&popHeight=$2&noscroll&link=http$3 [L]
+
 RewriteRule ^youtube/?$ youtube.php [L]
 RewriteRule ^youtube/http(.*) youtube.php?link=http$2 [L]
 RewriteRule ^youtube/(A?i?P?L?)/http(.*) youtube.php?advOptions=$1&link=http$2 [L]
 RewriteRule ^youtube/([0-9]+)/([0-9]+)/http(.*) youtube.php?popWidth=$1&popHeight=$2&link=http$3 [L]
 RewriteRule ^youtube/([0-9]+)/([0-9]+)/(A?i?P?L?)/http(.*) youtube.php?popWidth=$1&popHeight=$2&advOptions=$3&link=http$4 [L]
+
 RewriteRule ^twitch/?$ twitch.php [L]
 RewriteRule ^twitch/([^/]+)$ twitch.php?channel=$1 [L]
 RewriteRule ^twitch/([^/]+)/([0-9]+)$ twitch.php?channel=$1&h=$2 [L]
 RewriteRule ^twitch/([^/]+)/(nochat|left|right)$ twitch.php?channel=$1&chat=$2 [L]
 RewriteRule ^twitch/([^/]+)/([0-9]+)/(nochat|left|right)$ twitch.php?channel=$1&h=$2&chat=$3 [L]
 RewriteRule ^twitch/([^/]+)/(nochat|left|right)/([0-9]+)$ twitch.php?channel=$1&h=$3&chat=$2 [L]
+
+RewriteRule ^ytg/?$ ytg.php [L]
+RewriteRule ^ytg/([^/]+)$ ytg.php?v=$1 [L]
+RewriteRule ^ytg/([^/]+)/([0-9]+)$ ytg.php?v=$1&h=$2 [L]
+RewriteRule ^ytg/([^/]+)/(nochat|left|right)$ ytg.php?v=$1&chat=$2 [L]
+RewriteRule ^ytg/([^/]+)/([0-9]+)/(nochat|left|right)$ ytg.php?v=$1&h=$2&chat=$3 [L]
+RewriteRule ^ytg/([^/]+)/(nochat|left|right)/([0-9]+)$ ytg.php?v=$1&h=$3&chat=$2 [L]
+
 RewriteRule ^changelog/?$ changelog.php
