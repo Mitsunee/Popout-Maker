@@ -2,7 +2,7 @@
 
 # Popout-Maker
 
-![Version](https://img.shields.io/badge/stable-1.2.1-green.svg)
+![Version](https://img.shields.io/badge/stable-1.2.2-green.svg)
 [![Link](https://img.shields.io/badge/http://-popoutmaker.mitsunee.com-555555.svg?colorA=55DD88)](http://popoutmaker.mitsunee.com)
 
 Popout-Maker is a small utility made to have an easy way to open a page, YouTube video, YouTube or Twitch Livestream inside of a popup window.  
@@ -51,14 +51,15 @@ Version 1.2 will be the *Preset Update* and is currently in development in the v
 <a name="goals"></a>
 ## Current goals:
 
-- [X] Using PHP to allow presets via GET variables
+- [x] Using PHP to allow presets via GET variables
 	- [x] Index
-	- [X] YouTube
+	- [x] YouTube + YouTube Gaming
 	- [x] Twitch
 - [ ] Adding buttons to copy or bookmark a preset-link
 - [ ] Error Pages
-- [ ] A small wiki showcasing all preset variables and a general guide for all 3 versions
+- [x] A small wiki showcasing all preset variables and a general guide for all 3 versions
 - [ ] redo this file (again)
+- [ ] Darkmode (that stays on)
 
 <a name="changelog"></a>
 ## Changelog
