@@ -27,5 +27,6 @@ echo $metaDescription;
 <script src="/assets/aspectratio.js"></script>
 <script src="/assets/ToggleDarkmode.js"></script>
 <?php
-if($self=="twitch") echo "<script src=\"/assets/radioValue.js\"></script>\n";
-if($self=="index"||$self=="youtube") echo "<script src=\"/assets/OpenTextbox.js\"></script>\n"; ?>
+if($self=="twitch"||$self=="ytg") echo "<script src=\"/assets/radioValue.js\"></script>\n";
+if($self=="index"||$self=="youtube") echo "<script src=\"/assets/OpenTextbox.js\"></script>\n"; 
+if($self=="youtube"||$self=="ytg") echo "<script src=\"/assets/_GET.js\"></script>\n";?>
