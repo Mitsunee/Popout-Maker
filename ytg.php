@@ -20,9 +20,6 @@ function GeneratePopout() {
 	//piece together preferences
 	popoutWindowpreferences = "width=" +inputwidth+ ",height=" +inputheight+ ",status=no,scrollbars=no,resizable=yes,location=no,menubar=no";
 	windowLink = "/frame/ytgframe.php?v="+inputVideoID+"&chat="+chatoption;
-	///DEV
-	windowLink += "&dev";
-	///DEV END
 	popoutWindow = window.open(windowLink, "pmpopout", popoutWindowpreferences);
 	popoutWindow.focus();
 }
