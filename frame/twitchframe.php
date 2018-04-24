@@ -47,11 +47,7 @@ iframe{border:0px;margin:0px;padding:0px;}
 // new:   https://www.twitch.tv/popout/mitsunee_/chat?popout=
 //legacy: https://www.twitch.tv/mitsunee_/chat?popout=
 if($chat) {
-	if(isset($_GET['legacychat'])) {
-		echo '<iframe src="https://www.twitch.tv/'.$channel.'/chat?popout=" id="twitch-chat" class="'.$chatoption.'"></iframe>';
-	} else {
-		echo '<iframe src="https://www.twitch.tv/embed/'.$channel.'/chat/" id="twitch-chat" class="'.$chatoption.'"></iframe>';
-	}
+	echo '<iframe src="https://www.twitch.tv/embed/'.$channel.'/chat/" id="twitch-chat" class="'.$chatoption.'"></iframe>';
 }
 ?>
 </body></html>
