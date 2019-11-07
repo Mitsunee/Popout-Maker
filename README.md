@@ -2,7 +2,7 @@
 
 # Popout-Maker
 
-***This repository is the current live version of Popout-Maker. For the new remake currently in development visit: https://github.com/neko-castle/Popout-Maker
+***This repository is the current live version of Popout-Maker. For the new remake currently in development visit: https://github.com/neko-castle/Popout-Maker***
 
 ![Version](https://img.shields.io/badge/stable-1.2.2-green.svg)
 [![Link](https://img.shields.io/badge/http://-popoutmaker.mitsunee.com-555555.svg?colorA=55DD88)](http://popoutmaker.mitsunee.com)
